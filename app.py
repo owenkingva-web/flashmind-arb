@@ -579,10 +579,12 @@ if __name__ == "__main__":
     print(f"Observation dim: {OBS_DIM}, Actions: {N_ACTIONS}")
     print("Launching Gradio dashboard...")
 
+    # Support Railway/VPS dynamic PORT, default to 7860 for HF Spaces
+    _port = int(os.environ.get("PORT", 7860))
     demo = build_ui()
     demo.launch(
         server_name="0.0.0.0",
-        server_port=7860,
+        server_port=_port,
         share=False,
         theme=gr.themes.Soft(primary_hue="cyan", secondary_hue="purple", neutral_hue="slate"),
     )

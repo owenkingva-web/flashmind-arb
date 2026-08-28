@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (NEVER commit these)
+.env
+.env.*
+*.pem
+*.key
+wallet*.json
+
+# Model training artifacts (keep inference weights)
+*.pt
+*.pth
+*.ckpt
+wandb/
+
+# Keep .npz model weights (they're small and needed for inference)
+!flashmind/models/*.npz
