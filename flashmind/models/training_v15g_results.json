@@ -1,0 +1,28 @@
+{
+  "version": "v15g",
+  "total_steps": 600000,
+  "elapsed_minutes": 2.100105353196462,
+  "real_data_used": true,
+  "num_pools_real": 0,
+  "best_composite": -Infinity,
+  "best_active": 0,
+  "best_sharpe": -Infinity,
+  "best_skip_rate": 0.0,
+  "best_exec_good": 0.0,
+  "best_exec_no_opp": 1.0,
+  "data_distribution": {
+    "imbalance_prob": 0.05,
+    "imbalance_magnitude_pct": 3.0000000000000027,
+    "jitter_magnitude": 0.0005,
+    "gas_range": [
+      15.0,
+      50.0
+    ],
+    "min_tvl_usd": 500000.0,
+    "converter_method": "to_market",
+    "pool_quality_filter": true
+  },
+  "final_model": "/tmp/my-project/flashmind/models/flashmind_ppo_v15g_final.zip",
+  "norm_file": "/tmp/my-project/flashmind/models/v15g_vecnormalize.pkl",
+  "timestamp": 1787848199.4662604
+}

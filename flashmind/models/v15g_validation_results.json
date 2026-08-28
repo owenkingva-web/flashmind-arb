@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-08-27T19:15:19.583255+00:00",
+  "model": "v15g_best",
+  "v15g": {
+    "skip_rate": 0.4375,
+    "exec_good_rate": 0.5365885416666667,
+    "bad_execute_rate": 0.025911458333333335,
+    "composite": 0.646968005952381,
+    "sharpe": 8.866484654431941,
+    "avg_pnl": 505.56347690174977,
+    "win_rate": 1.0,
+    "f1": 0.9539351851851853,
+    "total_strategies": 13,
+    "avg_active": 12.583333333333334,
+    "precision": 0.9539351851851853,
+    "opp_found_total": 185,
+    "opp_rate": 0.012044270833333334
+  },
+  "v15f": {
+    "skip_rate": 0.7166666666666667,
+    "exec_good_rate": 0.2796875,
+    "bad_execute_rate": 0.0036458333333333334,
+    "composite": 0.5135863095238096,
+    "sharpe": 9.027246986565503,
+    "avg_pnl": 483.6517548446854,
+    "win_rate": 1.0,
+    "f1": 0.9871323529411764,
+    "total_strategies": 11,
+    "avg_active": 9.083333333333334,
+    "precision": 0.9871323529411764,
+    "opp_found_total": 2552,
+    "opp_rate": 0.16614583333333333
+  },
+  "passed": 5,
+  "verdict": "EXCELLENT"
+}
