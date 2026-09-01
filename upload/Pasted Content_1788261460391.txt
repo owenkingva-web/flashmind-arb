@@ -1,0 +1,903 @@
+2026-09-01T11:02:10.843305316Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:10.843307956Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:10.843311075Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:12.919235919Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:14.912346009Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:14.912350889Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:14.912355669Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:16.904857740Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:18.906490880Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:18.906495900Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:18.906499820Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:21.016404670Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:22.975802356Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:22.975806366Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:22.975809416Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:25.088801658Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:27.064334667Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:27.064341057Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:27.064344487Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:29.205093700Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:31.190437794Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:31.190446834Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:31.190452864Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:33.354450539Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:35.254522868Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:35.254526758Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:35.254529588Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:37.296978063Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:39.260810273Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:39.260814562Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:39.260818722Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:41.409686954Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:43.376336088Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:43.378505993Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:43.378512783Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:45.479052529Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:47.478892773Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:47.478958392Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:47.478962302Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:49.545392222Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:51.514037256Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:51.514041866Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:51.514046026Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:53.635853723Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:55.613389132Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:55.613401672Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:55.613408382Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:57.713431462Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:59.655464731Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:02:59.655472580Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:02:59.655477460Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:01.697383507Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:03.659711470Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:03.659715520Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:03.659720440Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:05.778325142Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:07.745442287Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:07.745448857Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:07.745452387Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:10.213958484Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:11.761791522Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:11.761796692Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:11.761801382Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:13.818258661Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:15.775415630Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:15.775425450Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:15.775431040Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:17.825469248Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:19.783046256Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:19.783052246Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:19.783055556Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:22.206860482Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:23.850965531Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:23.850970811Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:23.850975501Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:26.257747377Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:28.306773081Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:28.306779241Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:28.306784851Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:30.372327361Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:32.289496995Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:32.289508984Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:32.289513664Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:34.276066405Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:36.310471666Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:36.310475686Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:36.310479496Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:38.386622947Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:40.345285652Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:40.345290192Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:40.345294302Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:42.362056131Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:44.405088104Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:44.405121323Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:44.405126723Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:46.484134122Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:48.442592700Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:48.442597670Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:48.442602830Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:50.488124884Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:52.468193652Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:52.468203162Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:52.468208562Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:54.536165418Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:56.494602916Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:03:56.494608826Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:56.494614206Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:03:58.572878890Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:00.584157306Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:00.584161416Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:00.584169365Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:02.602500463Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:04.571405383Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:04.571411343Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:04.571417573Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:06.763589330Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:08.742660690Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:08.742665009Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:08.742668959Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:10.883522653Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:12.844475103Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:12.844482683Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:12.844488052Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:14.942289218Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:16.898646284Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:16.898656994Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:16.898665104Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:19.050990149Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:21.025282708Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:21.025287568Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:21.025291828Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:23.102820473Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:25.081947682Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:25.081952512Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:25.081956962Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:27.173546264Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:29.141249498Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:29.141255418Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:29.141258628Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:31.292433661Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:33.241069065Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:33.241075754Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:33.241082524Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:35.362317761Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:37.335452533Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:37.335458113Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:37.335469693Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:39.401333780Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:41.366975932Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:41.366983432Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:41.366989052Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:43.803155494Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:45.424226569Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:45.424231349Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:45.424235849Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:47.677148126Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:49.791366199Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:49.791536558Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:49.791539538Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:51.726192190Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:53.889482046Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:53.889515846Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:53.889520066Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:55.774171856Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:57.783921389Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:04:57.783925419Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:57.783931059Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:04:59.883452581Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:01.941685951Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:01.941690381Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:01.941694751Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:03.908365677Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:06.023982336Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:06.023988836Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:06.023994656Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:08.012963793Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:10.011795093Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:10.011798883Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:10.011802113Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:12.058166059Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:14.046960836Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:14.046966326Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:14.046971306Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:16.123189090Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:18.057084961Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:18.057088251Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:18.057091851Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:20.154317812Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:22.116676926Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:22.116683975Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:22.122588230Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:24.248645561Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:26.204826489Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:26.204833959Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:26.204838559Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:28.270205069Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:30.233625530Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:30.233631100Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:30.233635420Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:32.350812601Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:34.322159686Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:34.322162976Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:34.322166096Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:36.402993661Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:38.364963178Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:38.364966858Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:38.364970887Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:40.447603346Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:42.419555473Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:42.419561213Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:42.419565233Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:44.509942550Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:46.477848598Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:46.477855097Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:46.477861607Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:48.550808794Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:50.518636896Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:50.518642156Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:50.518645376Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:52.610363596Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:54.593101694Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:54.593107534Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:54.593111084Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:56.723204338Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:58.706714292Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:05:58.706718962Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:05:58.706722832Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:00.801650185Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:02.761592907Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:02.761598407Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:02.761601687Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:04.837582588Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:06.805486175Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:06.805494725Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:06.805499595Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:08.897965454Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:10.861360696Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:10.861366216Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:10.861372286Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:13.236836119Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:14.927111545Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:14.927114465Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:14.927117235Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:17.165768050Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:18.948709607Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:18.948712397Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:18.948716317Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:21.317456546Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:23.167936608Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:23.168080366Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:23.168087666Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:25.335361943Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:27.342252462Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:27.342255692Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:27.342258392Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:29.282503082Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:31.307822259Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:31.307828659Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:31.307906048Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:33.379553785Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:35.356365940Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:35.356368940Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:35.356372900Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:37.436582316Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:39.414269365Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:39.414273355Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:39.414278255Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:41.570756319Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:43.529059299Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:43.529067169Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:43.531231955Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:45.638537865Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:47.598731787Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:47.598739387Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:47.598743897Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:49.791817618Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:51.723597784Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:51.723602444Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:51.723606484Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:53.773893791Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:55.741773575Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:55.741781035Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:55.741785815Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:57.861883423Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:59.815873716Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:06:59.815879836Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:06:59.815883796Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:01.859373488Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:03.850451749Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:03.850458038Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:03.850461808Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:05.912505636Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:07.890259429Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:07.890267469Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:07.890271619Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:09.962141519Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:11.924064365Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:11.924075455Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:11.924083044Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:14.116488998Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:16.089165105Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:16.089168055Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:16.089170795Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:18.157498743Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:20.123469460Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:20.123474070Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:20.123477830Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:22.584218674Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:24.209216094Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:24.209219464Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:24.209222474Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:26.569863164Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:28.241729033Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:28.241738923Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:28.241748703Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:30.643383887Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:32.676600112Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:32.676623201Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:32.676673661Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:34.634756367Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:36.629604925Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:36.629607915Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:36.629610844Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:38.653388489Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:40.620499420Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:40.620502190Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:40.620504990Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:42.634087493Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:44.733283329Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:44.733290279Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:44.733296789Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:46.730987682Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:48.752787077Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:48.752797707Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:48.752805067Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:50.772260120Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:52.795089618Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:52.795093258Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:52.795097088Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:54.790805210Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:56.809087561Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:07:56.809090421Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:56.809093641Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:07:58.799948081Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:00.790885582Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:00.790891662Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:00.790897072Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:02.959091660Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:04.927214880Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:04.927219210Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:04.927227900Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:06.979366181Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:08.947057608Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:08.947063958Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:08.947070197Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:11.032187483Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:13.014922835Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:13.014925965Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:13.014929185Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:15.179401896Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:17.138645924Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:17.138649814Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:17.138653214Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:19.257801715Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:21.224578322Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:21.224582802Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:21.224587552Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:23.313135709Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:25.274333021Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:25.274338791Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:25.274341851Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:27.377401039Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:29.346324438Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:29.346331878Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:29.346336818Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:31.448737637Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:33.403494817Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:33.403501317Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:33.403506297Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:35.512873971Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:37.457765184Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:37.457771474Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:37.457776234Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:39.578061880Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:41.548440171Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:41.548443641Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:41.548446581Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:43.731230641Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:45.685599775Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:45.685609505Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:45.685615015Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:47.818677244Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:49.788929492Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:49.788933802Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:49.788938412Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:52.235250005Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:54.269651411Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:54.269657602Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:54.269661071Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:56.279757639Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:58.352941465Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:08:58.352952175Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:08:58.352955385Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:00.320113896Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:02.294306930Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:02.294380009Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:02.294394539Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:04.318906323Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:06.299770815Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:06.299774045Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:06.299777355Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:08.339757649Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:10.304024610Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:10.304032630Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:10.304037570Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:12.409387116Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:14.382375302Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:14.382388302Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:14.382393812Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:16.466928654Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:18.428105455Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:18.430348520Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:18.430352200Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:20.597451214Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:22.563076287Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:22.563082357Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:22.563086716Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:24.653742306Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:26.625878330Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:26.625888930Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:26.625895610Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:28.784833902Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:30.744263150Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:30.744269550Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:30.744273900Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:32.800055215Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:34.762493022Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:34.762496052Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:34.762498952Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:36.833531639Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:38.791726537Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:38.791735327Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:38.791740377Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:40.892802302Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:42.882648529Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:42.882654029Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:42.882660239Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:44.937070587Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:46.901673728Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:46.901680788Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:46.901685608Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:49.005900574Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:50.972270337Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:50.972285617Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:50.972289177Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:53.021308701Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:54.985495472Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:54.988037514Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:54.988043354Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:57.080843171Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:59.041643263Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:09:59.041650923Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:09:59.041655283Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:01.124529234Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:03.104269697Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:03.104275087Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:03.104279487Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:05.605228271Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:07.638065675Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:07.638070225Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:07.638074385Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:09.651182079Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:11.671566444Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:11.671570574Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:11.671596064Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:13.671420869Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:15.651995210Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:15.652216078Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:15.652220388Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:17.633470363Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:19.649267384Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:19.649272814Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:19.649279104Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:21.626778942Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:23.769710260Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:23.769714480Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:23.769719120Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:25.737908485Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:27.759251769Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:27.759259269Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:27.759269099Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:29.799150758Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:31.867819347Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:31.867822987Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:31.867826397Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:33.907841078Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:35.871543598Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:35.871549088Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:35.871552248Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:37.939130203Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:39.924915281Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:39.924920961Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:39.924925511Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:41.997345295Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:43.957093445Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:43.957100255Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:43.957105245Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:46.111441039Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:48.056247878Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:48.057946808Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:48.057953798Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:50.153644109Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:52.114982795Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:52.115062704Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:52.115067494Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:54.227898715Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:56.190647219Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:10:56.190650679Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:56.190654499Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:10:58.247621834Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:00.217311093Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:00.217314923Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:00.217318213Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:02.265049804Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:04.225502887Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:04.225506137Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:04.225509287Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:06.306232113Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:08.267788147Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:08.267796067Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:08.267801707Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:10.343658539Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:12.293974659Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:12.295566861Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:12.295572111Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:14.356669100Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:16.350389980Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:16.350394360Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:16.350398360Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:18.391190567Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:20.349345785Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:20.349351115Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:20.349354565Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:22.478153725Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:24.511123023Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:24.511128413Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:24.511132813Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:26.519402846Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:28.513495029Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:28.513500479Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:28.513503519Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:30.590638788Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:32.682664493Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:32.682668633Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:32.682673633Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:34.735277388Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:36.673667494Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:36.673673114Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:36.673676344Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:38.800102820Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:40.765398719Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:40.765406329Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:40.765410439Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:42.882267063Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:44.872516728Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:44.872521768Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:44.872525158Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:47.084416278Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:49.091986191Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:49.091992241Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:49.091999431Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:51.498856627Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:53.109066509Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:53.109070499Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:53.109074849Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:55.182724970Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:57.157131206Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:11:57.157136076Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:57.157139126Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:11:59.584052514Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:01.183394151Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:01.183396901Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:01.183401061Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:03.252435267Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:05.243917028Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:05.243919568Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:05.243922448Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:07.586925004Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:09.674112982Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:09.674116542Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:09.674120092Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:11.592388278Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:13.502142621Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:13.502148681Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:13.502154331Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:15.732607401Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:17.609235314Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:17.609239953Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:17.609244733Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:19.621488410Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:21.554446628Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:21.554773544Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:21.554777054Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:23.763966725Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:25.731339803Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:25.731342713Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:25.731345263Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:27.839488938Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:29.757409228Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:29.757412368Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:29.757414968Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:31.778640930Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:33.894144077Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:33.894147827Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:33.894151847Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:35.814178565Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:37.499681128Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:37.499686478Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:37.499689918Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:39.853243275Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:41.558449061Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:41.558456550Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:41.558459870Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:43.930465574Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:45.582270575Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:45.582276575Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:45.582280804Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:47.628756205Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:49.637298736Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:49.637304426Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:49.637307816Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:52.035884919Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:53.992125573Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:53.992235292Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:53.992240862Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:56.045029926Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:57.950051231Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:12:57.950053921Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:12:57.950056691Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:00.117915929Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:02.135190680Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:02.135193330Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:02.135196180Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:04.108684647Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:06.220268383Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:06.220272543Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:06.220277853Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:08.283283238Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:10.252700863Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:10.252703673Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:10.252706893Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:12.313422577Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:14.396654681Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:14.396660841Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:14.396665691Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:16.405246145Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:18.408439259Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:18.408445069Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:18.408451099Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:20.451773668Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:22.534283534Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:22.534286654Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:22.534290474Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:24.495031551Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:26.589469427Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:26.589472427Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:26.589475447Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:28.616030666Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:30.623262670Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:30.623265800Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:30.623268860Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:32.577668602Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:34.622442761Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:34.622449421Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:34.622455011Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:36.691990547Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:38.709883916Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:38.709886786Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:38.709890596Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:40.681990705Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:42.844674191Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:42.844678281Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:42.844683121Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:44.786912132Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:46.766458320Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:46.766462129Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:46.766466119Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:48.799218889Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:50.883690075Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:50.883693755Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:50.883696925Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:52.918158297Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:54.859898048Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:54.859901288Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:54.859904488Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:56.882310514Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:13:58.870095616Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:58.870103076Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:13:58.870280614Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:00.983507836Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:02.979762375Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:02.979768075Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:02.979774215Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:04.968035115Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:06.937541682Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:06.937548982Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:06.937554052Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:09.037378115Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:10.976419971Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:10.976422641Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:10.976425421Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:13.091454178Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:15.015234326Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:15.015241636Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:15.015249526Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:17.091857420Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:19.085695273Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:19.085699733Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:19.085704043Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:21.140410772Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:23.108132925Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:23.108138915Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:23.108145144Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:25.176575373Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:27.135386986Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:27.135395036Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:27.135400966Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:29.216656794Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:31.173860697Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:31.173870617Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:31.173881777Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:33.291285966Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:35.283520382Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:35.283532512Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:35.283538332Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:37.314136333Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:39.420193170Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:39.420198840Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:39.420203940Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:41.372443582Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:43.382468904Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:43.382474554Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:43.382480624Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:45.403889810Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:47.368488288Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:47.368491268Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:47.368495048Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:49.409438269Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:51.426813344Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:51.426816394Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:51.426819554Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:53.415783172Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:55.447660818Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:55.447665968Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:55.447670547Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:57.474645887Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:59.447765273Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:14:59.447776373Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:14:59.447784953Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:01.562304274Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:03.609416803Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:03.609421143Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:03.609425163Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:05.641394190Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:07.760421625Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:07.760430175Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:07.760443674Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:09.692820657Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:11.667950725Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:11.667961995Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:11.667965175Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:13.726845007Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:15.759103095Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:15.759106555Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:15.759110095Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:17.772025375Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:19.819229838Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:19.819234068Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:19.819238518Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:21.817602203Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:23.799855187Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:23.799864217Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:23.799870697Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:25.854860706Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:27.838837893Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:27.838843643Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:27.838846963Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:29.979584484Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:31.944082517Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:31.944085977Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:31.944088847Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:34.053742244Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:36.022038687Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:36.022041817Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:36.022044957Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:38.093875954Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:40.055556141Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:40.055561311Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:40.055564751Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:42.134386072Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:44.100555200Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:44.100559390Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:44.100564680Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:46.257944194Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:48.225371390Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:48.225374790Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:48.225377870Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:50.302812599Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:52.247791825Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:52.247797655Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:52.247801764Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:54.355566250Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:56.318304650Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:15:56.318310090Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:56.318314550Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:15:58.449944613Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:00.425268755Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:00.425277515Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:00.425282865Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:02.541362590Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:04.499302666Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:04.511787399Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:04.511799928Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:06.901783395Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:09.095017999Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:09.095022129Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:09.095025479Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:10.990868684Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:12.710034065Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:12.710043614Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:12.710048834Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:15.000906690Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:17.100999158Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:17.101017308Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:17.101020958Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:19.082918972Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:21.063080529Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:21.063091228Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:21.063127938Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:23.145142337Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:25.134970806Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:25.134976556Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:25.134981626Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:27.087741427Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:29.082400584Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:29.082405804Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:29.082411494Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:31.209210420Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:33.240360845Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:33.240366805Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:33.240371415Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:35.232286815Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:37.188214253Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:37.188218343Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:37.188222343Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:39.412042689Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:41.387363254Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:41.387368134Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:41.387374193Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:43.529053038Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:45.500623356Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:45.500636366Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:45.500645826Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:47.841779477Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:49.835703379Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:49.835716979Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:49.835788728Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:52.487672495Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:54.458642721Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:54.458647311Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:54.458650761Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:56.645255335Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:58.555748090Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:16:58.555754020Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:16:58.555759950Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:00.657822940Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:02.625146318Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:02.625152438Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:02.625156368Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:04.683194836Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:06.656714017Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:06.656720507Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:06.656724777Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:08.749793428Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:10.719280175Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:10.719289495Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:10.719293475Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:12.902552319Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:14.885363332Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:14.885370322Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:14.885375272Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:16.947263518Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:18.911878493Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:18.914185556Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:18.914192886Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:21.041945017Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:23.026131856Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:23.026145465Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:23.026153225Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:25.169542615Z [inf]  [WS-DISC] Factory Uniswap V2 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:27.133979552Z [inf]  [WS-DISC] Factory Uniswap V3 Factory error: 400 Client Error: Bad Request for url: https://arb-mainnet.g.alchemy.com/v2/alch_nkqWqlabvAAQhXF9WSQ2q
+2026-09-01T11:17:27.133989252Z [inf]  [WS-DISC] Factory Sushi Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
+2026-09-01T11:17:27.133995502Z [inf]  [WS-DISC] Factory Camelot Factory error: ("The event 'PairCreated' was not found in this contract's abi. ", 'Are you sure you provided the correct contract abi?')
