@@ -1,0 +1,75 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+venv/
+.venv/
+env/
+
+# Node/Next.js
+node_modules/
+.next/
+out/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+db/
+prisma/migrations/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+*.out
+*.pid
+logs/
+vulnhunt/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models / large files
+*.npz
+*.pkl
+*.zip
+flashmind/models/
+hf-spaces-flashmind/flashmind/models/
+
+# Download/cache artifacts
+download/
+vulnhunt/data/
+
+# Venv
+flashmind/venv/
+
+# Misc
+bun.lock
+package-lock.json
+Caddyfile
+*.bak
+
+# Auto-generated
+next-env.d.ts
+
+# System (not project code)
+skills/
+examples/
+.git-credentials
+tool-results/
