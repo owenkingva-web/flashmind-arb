@@ -7,6 +7,7 @@ Otherwise           → falls back to local SQLite file.
 import json
 import os
 import sqlite3
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
@@ -32,14 +33,22 @@ class Database:
         url = database_url or os.getenv('DATABASE_URL', '')
         self.is_pg = bool(url) and HAS_PG
 
+        self._lock = threading.RLock()
+
         if self.is_pg:
             self.conn = psycopg2.connect(url)
             self.conn.autocommit = True
+            self.path = 'PostgreSQL'
+            print(f'  [DB] PostgreSQL connected')
         else:
-            self.path = Path(path) if path else Path(DB_PATH)
-            self.path.parent.mkdir(parents=True, exist_ok=True)
-            self.conn = sqlite3.connect(str(self.path), check_same_thread=False)
+            self.path = str(Path(path) if path else Path(DB_PATH))
+            Path(self.path).parent.mkdir(parents=True, exist_ok=True)
+            self.conn = sqlite3.connect(self.path, check_same_thread=False)
             self.conn.row_factory = sqlite3.Row
+            if url:
+                print(f'  [DB] WARNING: DATABASE_URL set but psycopg2 not available, falling back to SQLite')
+            else:
+                print(f'  [DB] SQLite: {self.path}')
 
         self._init_tables()
 
@@ -189,7 +198,7 @@ class Database:
             return [dict(r) for r in cur.fetchall()]
 
     def _q(self, query, params=()):
-        """Execute query, return cursor (caller manages commit/fetch)."""
+        """Execute query, return cursor. Caller must hold _lock for SQLite."""
         if self.is_pg:
             cur = self.conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         else:
@@ -199,43 +208,58 @@ class Database:
 
     def _q1(self, query, params=()):
         """Execute + fetchone dict."""
-        cur = self._q(query, params)
-        row = self._row(cur)
         if not self.is_pg:
+            self._lock.acquire()
+        try:
+            cur = self._q(query, params)
+            row = self._row(cur)
             cur.close()
-            self.conn.commit()
-        else:
-            cur.close()
-        return row
+            if not self.is_pg:
+                self.conn.commit()
+            return row
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     def _qall(self, query, params=()):
         """Execute + fetchall dicts."""
-        cur = self._q(query, params)
-        rows = self._rows(cur)
         if not self.is_pg:
+            self._lock.acquire()
+        try:
+            cur = self._q(query, params)
+            rows = self._rows(cur)
             cur.close()
-            self.conn.commit()
-        else:
-            cur.close()
-        return rows
+            if not self.is_pg:
+                self.conn.commit()
+            return rows
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     def _returning_id(self, query, params=()):
         """Execute INSERT ... RETURNING id, return the id."""
-        if self.is_pg:
-            cur = self.conn.cursor()
-            cur.execute(query, params)
-            row = cur.fetchone()
-            cur.close()
-            return row[0] if row else 0
-        else:
-            c = self.conn.cursor()
-            c.execute(query, params)
-            row = c.fetchone()
-            c.close()
-            self.conn.commit()
-            return row['id'] if row else 0
+        if not self.is_pg:
+            self._lock.acquire()
+        try:
+            if self.is_pg:
+                cur = self.conn.cursor()
+                cur.execute(query, params)
+                row = cur.fetchone()
+                cur.close()
+                return row[0] if row else 0
+            else:
+                c = self.conn.cursor()
+                c.execute(query, params)
+                row = c.fetchone()
+                c.close()
+                self.conn.commit()
+                return row['id'] if row else 0
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     def _commit(self):
+        """Commit current transaction. Caller must hold _lock for SQLite."""
         if not self.is_pg:
             self.conn.commit()
 
@@ -387,21 +411,19 @@ class Database:
         ph = self.p
         total = regex_f + slither_f
         now = _now()
-        if self.is_pg:
+        if not self.is_pg:
+            self._lock.acquire()
+        try:
             self._q(f"""UPDATE scans SET
                 regex_findings={ph}, slither_findings={ph}, total_findings={ph},
                 critical_count={ph}, high_count={ph}, medium_count={ph}, low_count={ph}
                 WHERE id={ph}""", (regex_f, slither_f, total, critical, high, medium, low, scan_id))
             self._q(f"""UPDATE protocols SET last_scanned = {ph}, scan_count = scan_count + 1
                 WHERE id = (SELECT protocol_id FROM contracts WHERE id = {ph})""", (now, scan_id))
-        else:
-            self._q(f"""UPDATE scans SET
-                regex_findings={ph}, slither_findings={ph}, total_findings={ph},
-                critical_count={ph}, high_count={ph}, medium_count={ph}, low_count={ph}
-                WHERE id={ph}""", (regex_f, slither_f, total, critical, high, medium, low, scan_id))
-            self._q(f"""UPDATE protocols SET last_scanned = {ph}, scan_count = scan_count + 1
-                WHERE id = (SELECT protocol_id FROM contracts WHERE id = {ph})""", (now, scan_id))
-            self.conn.commit()
+            self._commit()
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     # ── Finding CRUD ──────────────────────────────────────────────────────
 
@@ -433,16 +455,28 @@ class Database:
                                      json.dumps(raw_data or {})))
 
     def mark_finding_validated(self, finding_id, is_valid):
-        self._q(f'UPDATE findings SET is_validated = 1 WHERE id = {self.p} AND is_validated = 0',
-                (finding_id,))
-        self._commit()
+        if not self.is_pg:
+            self._lock.acquire()
+        try:
+            self._q(f'UPDATE findings SET is_validated = 1 WHERE id = {self.p} AND is_validated = 0',
+                    (finding_id,))
+            self._commit()
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     def mark_finding_exploited(self, finding_id, tx_hash, profit_eth=0, profit_usd=0):
         ph = self.p
         profit_str = f'{profit_eth:.6f} ETH / ${profit_usd:.2f}'
-        self._q(f'UPDATE findings SET is_exploited = 1, exploit_tx_hash = {ph}, exploit_profit = {ph} WHERE id = {ph}',
-                (tx_hash, profit_str, finding_id))
-        self._commit()
+        if not self.is_pg:
+            self._lock.acquire()
+        try:
+            self._q(f'UPDATE findings SET is_exploited = 1, exploit_tx_hash = {ph}, exploit_profit = {ph} WHERE id = {ph}',
+                    (tx_hash, profit_str, finding_id))
+            self._commit()
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     def get_exploitable_findings(self, min_confidence=0.5, min_severity='HIGH') -> list:
         ph = self.p
@@ -512,8 +546,14 @@ class Database:
             return
         ph = self.p
         placeholders = ','.join([ph] * len(alert_ids))
-        self._q(f'UPDATE alerts SET sent = 1 WHERE id IN ({placeholders})', alert_ids)
-        self._commit()
+        if not self.is_pg:
+            self._lock.acquire()
+        try:
+            self._q(f'UPDATE alerts SET sent = 1 WHERE id IN ({placeholders})', alert_ids)
+            self._commit()
+        finally:
+            if not self.is_pg:
+                self._lock.release()
 
     # ── Stats ─────────────────────────────────────────────────────────────
 

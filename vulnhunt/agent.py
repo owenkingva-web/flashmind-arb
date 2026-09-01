@@ -358,6 +358,9 @@ class HunterAgent:
         """
         addr = target.address
         chain_id = target.chain_id
+        # Strip chain-prefix from DeFiLlama addresses (e.g. "merlin:0xabc..." -> "0xabc...")
+        if ':' in addr and not addr.startswith('0x'):
+            addr = addr.split(':', 1)[1]
         chain = CHAINS.get(chain_id, {})
         chain_name = chain.get('name', f'chain-{chain_id}')
 
