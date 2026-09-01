@@ -23,9 +23,6 @@ COPY vulnhunt/ vulnhunt/
 # Data directory (SQLite DB lives here)
 RUN mkdir -p /app/vulnhunt/data /app/vulnhunt/pocs
 
-# Volumes for persistence across deploys
-VOLUME ["/app/vulnhunt/data"]
-
 # Default: single scan cycle (Railway will restart it via CMD loop)
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
