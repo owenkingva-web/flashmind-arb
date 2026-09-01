@@ -195,10 +195,12 @@ class HunterAgent:
     async def _async_run(self, batch_interval: int):
         """Async main loop running all monitors concurrently."""
         tasks = []
-        # Start real-time monitors
-        if self.use_realtime:
-            tasks.append(asyncio.create_task(self.ws_discovery.start(self.chain_ids)))
-            tasks.append(asyncio.create_task(self.mempool.start(self.chain_ids)))
+        # NOTE: WS-DISC and mempool disabled — they spam Alchemy with
+        # failing eth_getLogs on DEX factories, blocking the main scan loop.
+        # The batch scan + fast RPC scanner handle all discovery.
+        # if self.use_realtime:
+        #     tasks.append(asyncio.create_task(self.ws_discovery.start(self.chain_ids)))
+        #     tasks.append(asyncio.create_task(self.mempool.start(self.chain_ids)))
         # Start the batch scan loop
         tasks.append(asyncio.create_task(self._batch_scan_loop(batch_interval)))
         # Start the real-time scan processor
