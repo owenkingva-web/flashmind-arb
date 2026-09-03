@@ -185,8 +185,14 @@ class PreflightChecker:
                             address=Web3.to_checksum_address(pool),
                             abi=self.AAVE_POOL_ABI,
                         )
-                        # Try WETH (most common)
-                        weth = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2' if chain_id == 1 else '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1'
+                        # WETH address varies by chain
+                        weth_by_chain = {
+                            1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',     # Mainnet WETH
+                            42161: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',  # Arbitrum WETH
+                            8453: '0x4200000000000000000000000000000000000006',    # Base WETH
+                            56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',    # BSC WBNB
+                        }
+                        weth = weth_by_chain.get(chain_id, weth_by_chain[1])
                         liquidity = pool_contract.functions.getAvailableLiquidity(
                             Web3.to_checksum_address(weth)
                         ).call()

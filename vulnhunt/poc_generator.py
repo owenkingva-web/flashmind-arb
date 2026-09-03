@@ -430,7 +430,7 @@ contract VulnHunterOracleManip {{
         // (swap back)
 
         // Step 5: Repay flash loan
-        uint256 premium = amounts[0] * 5 / 10000; // 0.05% Balancer fee
+        uint256 premium = amounts[0] * 50 / 10000; // 0.5% Balancer fee (conservative upper bound; actual fee varies per pool 0-1%)
         IERC20(assets[0]).approve(msg.sender, amounts[0] + premium);
         return true;
     }}

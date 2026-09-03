@@ -7,7 +7,7 @@ MEV (sandwich, liquidation, arbitrage).
 """
 __version__ = '3.2.0'
 
-from .config import CHAINS, WALLET_PRIVATE_KEY, ETH_PRICE_USD, DEFAULT_SCAN
+from .config import CHAINS, WALLET_PRIVATE_KEY, ETH_PRICE_USD, DEFAULT_SCAN, SETTINGS
 from .db import Database
 from .discovery import DiscoveryEngine
 from .fetcher import SourceFetcher
@@ -26,8 +26,15 @@ from .sandwich_bot import SandwichBot
 from .liquidation_hunter import LiquidationHunter
 from .arb_scanner import ArbScanner
 
+# Compatibility aliases for code that imports under alternate names
+# (Phase 8-10 modules may use these)
+GovernanceMonitor = GovernanceScanner
+Alerter = AlertManager
+TxExecutor = ExploitExecutor
+WsDiscovery = None  # ws_discovery.WebSocketDiscovery loaded lazily
+
 __all__ = [
-    'CHAINS', 'WALLET_PRIVATE_KEY', 'ETH_PRICE_USD', 'DEFAULT_SCAN',
+    'CHAINS', 'WALLET_PRIVATE_KEY', 'ETH_PRICE_USD', 'DEFAULT_SCAN', 'SETTINGS',
     'Database', 'DiscoveryEngine', 'SourceFetcher',
     'VulnerabilityAnalyzer', 'Finding', 'OnChainProber',
     'GovernanceScanner', 'ExploitabilityAssessor',
@@ -35,4 +42,6 @@ __all__ = [
     'AlertManager', 'HunterAgent',
     'UpgradeMonitor', 'InitHunter',
     'SandwichBot', 'LiquidationHunter', 'ArbScanner',
+    # Compatibility aliases
+    'GovernanceMonitor', 'Alerter', 'TxExecutor', 'WsDiscovery',
 ]

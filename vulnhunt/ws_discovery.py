@@ -75,9 +75,8 @@ DEX_FACTORIES = {
         'Uniswap V3 Factory': '0x1F98431c8aD98523631AE4a59f267346ea31F984',
         'Sushi Factory': '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac',
     },
-    # Arbitrum
+    # Arbitrum (Uniswap V2 does not exist on Arbitrum, only V3)
     42161: {
-        'Uniswap V2 Factory': '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f',
         'Uniswap V3 Factory': '0x1F98431c8aD98523631AE4a59f267346ea31F984',
         'Sushi Factory': '0xc35DADB65012eC5796536bD9864eD8773aBc74C4',
         'Camelot Factory': '0x6EcCab42245a261833E24A861cEA18396331b0b6',

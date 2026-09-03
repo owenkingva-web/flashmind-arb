@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from typing import Optional
 import requests
 from web3 import Web3
-from .config import CHAINS, KNOWN_SAFE_PROTOCOLS, DEFAULT_SCAN
+from .config import CHAINS, KNOWN_SAFE_PROTOCOLS, DEFAULT_SCAN, ACTIVE_CHAIN_IDS
 from .db import Database
 
 
@@ -114,7 +114,10 @@ class DiscoveryEngine:
         now = datetime.now(timezone.utc)
         cutoff = now.timestamp() - (days_old * 86400)
         targets = []
-        per_chain_budget = 20  # Max 20 individual API calls per cycle
+        # Per-chain budget to prevent cross-protocol bleed: each chain
+        # gets its own budget counter so one chain can't exhaust the API budget
+        # for all other chains.
+        per_chain_budget = {}  # chain_id -> remaining API calls
         for p in all_protos:
             slug = p.get("slug", "")
             if slug in KNOWN_SAFE_PROTOCOLS:
@@ -130,8 +133,12 @@ class DiscoveryEngine:
             if not chain_ids:
                 continue
             # P0-4 FIX: Use per-chain addresses from DeFiLlama
-            per_chain_addrs = self._get_defillama_chain_addresses(slug, per_chain_budget)
-            per_chain_budget -= (0 if slug in self._defillama_chain_cache else 1)
+            # Use minimum budget across all chains for this protocol
+            min_budget = min((per_chain_budget.get(c, 20) for c in chain_ids), default=20)
+            per_chain_addrs = self._get_defillama_chain_addresses(slug, min_budget)
+            # Decrement budget for the specific chain, not globally
+            for c in chain_ids:
+                per_chain_budget[c] = per_chain_budget.get(c, 20) - (0 if slug in self._defillama_chain_cache else 1)
             methodology = p.get("methodology", "")
             extra_addrs = re.findall(r"0x[a-fA-F0-9]{40}", methodology)
             protocol_id = self.db.upsert_protocol(
@@ -681,7 +688,7 @@ class DiscoveryEngine:
         """
         all_targets = []
         if chain_ids is None:
-            chain_ids = [42161, 8453, 56, 1]
+            chain_ids = ACTIVE_CHAIN_IDS
         # Channel 1: DeFiLlama NEW protocols (filtered by days_old)
         all_targets.extend(self.discover_defillama(min_tvl=min_tvl, max_tvl=max_tvl, days_old=days_old, chains=chain_ids))
         # Channel 2: DeFiLlama ALL protocols (change detection, re-scan)

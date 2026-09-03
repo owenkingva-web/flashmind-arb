@@ -147,7 +147,64 @@ DEFAULT_SCAN = {
     'discovery_interval': 30,  # v3.1: Every 30s instead of 60s
 }
 
+# NOTE: ETH_PRICE_USD=2400 is a stale default. In production, use get_eth_price()
+# which fetches from CoinGecko with a TTL cache, falling back to this value.
 ETH_PRICE_USD = 2400
 
-# Active chains — Arbitrum only
-ACTIVE_CHAIN_IDS = [42161]
+# Active chains — all configured chains
+ACTIVE_CHAIN_IDS = [42161, 8453, 56, 1]
+
+
+# ── Dynamic ETH price with TTL cache ────────────────────────────────────────
+_eth_price_cache = {'price': ETH_PRICE_USD, 'timestamp': 0}
+_ETH_PRICE_TTL = 60  # seconds
+
+
+def get_eth_price() -> float:
+    """Get a fresh ETH/USD price from CoinGecko (with TTL cache).
+
+    Falls back to the hardcoded ETH_PRICE_USD on any failure.
+    Cache duration: 60 seconds.
+    """
+    import time as _time
+    now = _time.time()
+    if now - _eth_price_cache['timestamp'] < _ETH_PRICE_TTL:
+        return _eth_price_cache['price']
+
+    try:
+        import requests as _requests
+        coingecko_key = os.getenv('COINGECKO_API_KEY', '')
+        headers = {}
+        if coingecko_key:
+            headers['x-cg-demo-api-key'] = coingecko_key
+        resp = _requests.get(
+            'https://api.coingecko.com/api/v3/simple/price',
+            params={'ids': 'ethereum', 'vs_currencies': 'usd'},
+            headers=headers,
+            timeout=10,
+        )
+        if resp.status_code == 200:
+            price = resp.json()['ethereum']['usd']
+            _eth_price_cache['price'] = price
+            _eth_price_cache['timestamp'] = now
+            return price
+    except Exception:
+        pass
+
+    # Fallback to stale value — don't retry for another TTL
+    _eth_price_cache['timestamp'] = now
+    return _eth_price_cache['price']
+
+
+SETTINGS = {
+    'chains': CHAINS,
+    'active_chain_ids': ACTIVE_CHAIN_IDS,
+    'eth_price_usd': ETH_PRICE_USD,
+    'default_scan': DEFAULT_SCAN,
+    'known_safe_protocols': KNOWN_SAFE_PROTOCOLS,
+    'wallet_private_key': WALLET_PRIVATE_KEY,
+    'data_dir': DATA_DIR,
+    'log_dir': LOG_DIR,
+    'poc_dir': POC_DIR,
+    'db_path': DB_PATH,
+}

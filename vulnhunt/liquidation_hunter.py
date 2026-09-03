@@ -5,6 +5,7 @@ undercollateralized positions with healthFactor < 1.0.
 Focuses on Aave V3 getUserAccountData for known/recent borrowers.
 """
 import asyncio
+import threading
 import time
 from datetime import datetime, timezone
 from web3 import Web3
@@ -47,6 +48,7 @@ class LiquidationHunter:
         self._contract_cache: dict = {}
         self._running = False
         self._borrowers: dict[int, set] = {c: set() for c in CHAINS}
+        self._lock = threading.Lock()  # protects _borrowers mutations
 
     def _get_w3(self, chain_id: int) -> Web3:
         if chain_id not in self._w3_cache:
@@ -132,7 +134,8 @@ class LiquidationHunter:
                         if len(log.topics) > 1:
                             user = '0x' + log.topics[1][-20:].hex()
                             if user not in self._borrowers[chain_id]:
-                                self._borrowers[chain_id].add(user)
+                                with self._lock:
+                                    self._borrowers[chain_id].add(user)
                                 new += 1
                 except Exception:
                     pass

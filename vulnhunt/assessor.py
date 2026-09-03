@@ -66,17 +66,20 @@ class ExploitabilityAssessor:
         should_alert = False
         action_reason = ''
 
-        # Auto-execute thresholds:
-        # - Source-verified: high confidence (these need fork validation)
-        # - RPC-confirmed (fast_rpc): lower bar (on-chain state IS the proof)
+        # Auto-execute thresholds (ordered so branches are mutually exclusive):
+        # 1. High confidence + high priority → AUTO-EXECUTE (safest, most reliable)
+        # 2. Medium confidence on-chain confirmed → AUTO-EXECUTE (lower bar for RPC-confirmed state)
+        # 3. Moderate confidence but not auto-execute → ALERT for manual review
+        # 4. High severity but not zero-cap → ALERT
         if zero_cap and priority >= 70 and confidence >= 0.7:
             should_auto_execute = True
             action_reason = 'AUTO-EXECUTE: High confidence zero-cap exploit'
         elif zero_cap and priority >= 25 and confidence >= 0.4:
-            # Lower threshold for on-chain confirmed findings
+            # Lower threshold for on-chain confirmed findings (fast_rpc source)
             should_auto_execute = True
             action_reason = 'AUTO-EXECUTE: On-chain confirmed zero-cap'
         elif zero_cap and priority >= 50 and confidence >= 0.5:
+            # Medium quality — alert for manual review, don't auto-execute
             should_alert = True
             action_reason = 'ALERT: Potential zero-cap exploit, needs validation'
         elif severity in ('CRITICAL', 'HIGH') and confidence >= 0.6:

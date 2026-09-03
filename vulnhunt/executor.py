@@ -53,13 +53,10 @@ AAVE_POOL_ABI = json.dumps([
 
 BALANCER_VAULT_ABI = json.dumps([
     {"inputs": [
-        {"internalType": "address", "name": "recipient", "type": "address"},
-        {"internalType": "address[]", "name": "assets", "type": "address[]"},
+        {"internalType": "contract IFlashLoanRecipient", "name": "recipient", "type": "address"},
+        {"internalType": "contract IERC20[]", "name": "tokens", "type": "address[]"},
         {"internalType": "uint256[]", "name": "amounts", "type": "uint256[]"},
-        {"internalType": "uint256[]", "name": "interestRateModes", "type": "uint256[]"},
-        {"internalType": "address", "name": "onBehalfOf", "type": "address"},
-        {"internalType": "bytes", "name": "params", "type": "bytes"},
-        {"internalType": "bytes", "name": "flashLoanData", "type": "bytes"}
+        {"internalType": "bytes", "name": "userData", "type": "bytes"}
     ], "name": "flashLoan", "outputs": [], "stateMutability": "nonpayable", "type": "function"},
 ])
 

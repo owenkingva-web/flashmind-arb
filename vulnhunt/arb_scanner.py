@@ -5,10 +5,27 @@ and V3 slot0.sqrtPriceX96. Flags opportunities where spread > 0.5%.
 """
 import asyncio
 import time
+import requests
 from web3 import Web3
 
 from .config import CHAINS, ETH_PRICE_USD
 from .db import Database
+
+
+def get_fresh_eth_price() -> float:
+    """Fetch a fresh ETH/USD price from CoinGecko.
+    Falls back to the stale config value on failure.
+    """
+    try:
+        r = requests.get(
+            'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
+            timeout=5,
+        )
+        if r.status_code == 200:
+            return float(r.json()['ethereum']['usd'])
+    except Exception:
+        pass
+    return float(ETH_PRICE_USD)
 
 
 TOKENS = {
@@ -54,6 +71,14 @@ BRIDGE_COST = {(1,42161):5,(42161,1):5,(1,8453):3,(8453,1):3,(1,56):8,(56,1):8,
                (42161,8453):2,(8453,42161):2,(42161,56):6,(56,42161):6,(8453,56):6,(56,8453):6}
 MIN_SPREAD_PCT = 0.5
 
+# Token decimals per chain (USDT has 6 on ETH/Arbitrum but 18 on BSC)
+TOKEN_DECIMALS = {
+    'USDC': {1: 6, 42161: 6, 8453: 6, 56: 18},
+    'USDT': {1: 6, 42161: 6, 8453: 6, 56: 18},
+    'WETH': {1: 18, 42161: 18, 8453: 18, 56: 18},
+    'WBTC': {1: 8, 42161: 8, 8453: 8, 56: 8},
+}
+
 
 class ArbScanner:
     """Cross-chain arbitrage price scanner."""
@@ -94,7 +119,7 @@ class ArbScanner:
                 self._t0[tk] = self._get_ct(cid, addr, V2_ABI).functions.token0().call().lower()
             t_addr = TOKENS.get(token, {}).get(cid, '').lower()
             rt, rq = (r0, r1) if self._t0[tk] == t_addr else (r1, r0)
-            return (rq / 10**(6 if quote == 'USDC' else 18)) / (rt / 1e18)
+            return (rq / 10**TOKEN_DECIMALS.get(quote, {}).get(cid, 18)) / (rt / 10**TOKEN_DECIMALS.get(token, {}).get(cid, 18))
         return float(ETH_PRICE_USD) if token == 'WETH' and cid in CHAINS else 0.0
 
     def _v3_price(self, cid: int, token: str) -> float:
@@ -109,12 +134,13 @@ class ArbScanner:
                     self._t0[tk] = self._get_ct(cid, addr, V3_ABI).functions.token0().call().lower()
                 if self._t0[tk] == TOKENS.get(quote, {}).get(cid, '').lower():
                     price = 1.0 / price if price > 0 else 0
-                return price * 10**(18 - (6 if quote == 'USDC' else 18))
+                return price * 10**(18 - TOKEN_DECIMALS.get(quote, {}).get(cid, 18))
         return 0.0
 
     def calculate_profit(self, opp: dict) -> float:
         bc, sc = opp.get('buy_chain', 0), opp.get('sell_chain', 0)
-        costs = ((CHAINS.get(bc,{}).get('gas_price_gwei',1) * 500000 / 1e9) * ETH_PRICE_USD
+        live_price = get_fresh_eth_price()
+        costs = ((CHAINS.get(bc,{}).get('gas_price_gwei',1) * 500000 / 1e9) * live_price
                  if bc == sc else 2.0 + BRIDGE_COST.get((bc, sc), 5.0))
         return max(0.0, 10000 * opp.get('spread_pct', 0) / 100 - costs)
 

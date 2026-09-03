@@ -23,7 +23,7 @@ except ImportError:
 
 
 def _now():
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
 
 
 class Database:
@@ -289,7 +289,7 @@ class Database:
                     last_scanned=last_scanned
                 RETURNING id"""
         return self._returning_id(q, (slug, name, category, tvl,
-                                     json.dumps(chains or []), address, url, listed_at, now))
+                                     json.dumps(chains or []), address.lower() if address else '', url, listed_at, now))
 
     def get_unscanned_protocols(self, hours=24) -> list:
         if self.is_pg:
@@ -340,12 +340,12 @@ class Database:
                     compiler_version=excluded.compiler_version,
                     source_fetched_at=excluded.source_fetched_at, bytecode_size=excluded.bytecode_size
                 RETURNING id"""
-        return self._returning_id(q, (address, chain_id, protocol_id, contract_name,
-                                     1 if is_proxy else 0, implementation,
+        return self._returning_id(q, (address.lower(), chain_id, protocol_id, contract_name,
+                                     1 if is_proxy else 0, implementation.lower() if implementation else '',
                                      1 if is_verified else 0, compiler_version, now, bytecode_size))
 
     def get_protocol_by_slug(self, slug) -> Optional[dict]:
-        return self._q1(f'SELECT * FROM protocols WHERE slug = {self.p}', (slug,))
+        return self._q1(f'SELECT * FROM protocols WHERE slug = {self.p}', (slug.lower(),))
 
     def get_known_proxies(self) -> list:
         return self._qall("""SELECT * FROM contracts WHERE is_proxy = 1
@@ -535,7 +535,7 @@ class Database:
                     contract_address, chain_id, message, finding_ids)
                 VALUES (?,?,?,?,?,?,?,?) RETURNING id"""
         return self._returning_id(q, (_now(), alert_type, severity, protocol_name,
-                                     contract_address, chain_id, message,
+                                     contract_address.lower() if contract_address else '', chain_id, message,
                                      json.dumps(finding_ids or [])))
 
     def get_unsent_alerts(self) -> list:

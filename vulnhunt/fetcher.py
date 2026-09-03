@@ -19,11 +19,26 @@ class SourceFetcher:
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": "VulnHunter/2.0"})
         self._cache = {}
+        self._cache_timestamps = {}  # track when each entry was cached
+        self._CACHE_MAX = 5000
+        self._CACHE_TTL_NONE = 60  # seconds before retrying a failed (None) entry
 
     def fetch_source(self, address: str, chain_id: int):
         cache_key = f"{chain_id}:{address.lower()}"
+        now = time.time()
+
         if cache_key in self._cache:
-            return self._cache[cache_key]
+            # If cached value is None (failed fetch), check TTL before re-fetching
+            if self._cache[cache_key] is None:
+                cached_at = self._cache_timestamps.get(cache_key, 0)
+                if now - cached_at < self._CACHE_TTL_NONE:
+                    return None  # still within TTL, don't retry yet
+                # TTL expired for None entry — evict and re-fetch below
+                del self._cache[cache_key]
+                del self._cache_timestamps[cache_key]
+            else:
+                return self._cache[cache_key]
+
         chain = CHAINS.get(chain_id)
         if not chain:
             return None
@@ -35,15 +50,18 @@ class SourceFetcher:
         }
         try:
             r = self.session.get(chain['explorer_api'], params=params, timeout=30)
+            # Do NOT cache 429 rate-limit failures — raise to signal retry
+            if r.status_code == 429:
+                raise requests.exceptions.HTTPError('429 Rate Limited — do not cache')
             r.raise_for_status()
             data = r.json()
             if data.get('status') != '1' or not data.get('result'):
-                self._cache[cache_key] = None
+                self._cache_set(cache_key, None)
                 return None
             result = data['result'][0] if isinstance(data['result'], list) else data['result']
             source = result.get('SourceCode', '')
             if not source or len(source) < 50:
-                self._cache[cache_key] = None
+                self._cache_set(cache_key, None)
                 return None
             parsed = {
                 'source_code': source, 'abi': result.get('ABI', '[]'),
@@ -56,11 +74,26 @@ class SourceFetcher:
             }
             parsed['multi_file'] = self._parse_multi_file_source(source)
             parsed['abi_parsed'] = self._parse_abi(parsed['abi'])
-            self._cache[cache_key] = parsed
+            self._cache_set(cache_key, parsed)
             return parsed
+        except requests.exceptions.HTTPError:
+            # Re-raise 429 so caller can retry; don't cache
+            raise
         except Exception:
-            self._cache[cache_key] = None
+            self._cache_set(cache_key, None)
             return None
+
+    def _cache_set(self, key, value):
+        """Set cache entry with eviction if over max size."""
+        if len(self._cache) >= self._CACHE_MAX and key not in self._cache:
+            # Evict oldest entries (first 10% of cache)
+            evict_count = max(1, len(self._cache) // 10)
+            oldest_keys = sorted(self._cache_timestamps, key=self._cache_timestamps.get)[:evict_count]
+            for k in oldest_keys:
+                self._cache.pop(k, None)
+                self._cache_timestamps.pop(k, None)
+        self._cache[key] = value
+        self._cache_timestamps[key] = time.time()
 
     def prepare_source_for_slither(self, source_data, address):
         if not source_data or not source_data.get('source_code'):

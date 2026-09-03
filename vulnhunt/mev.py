@@ -79,13 +79,20 @@ class MEVProtection:
                 self._fb_cache[chain_id] = None
         return self._fb_cache[chain_id]
 
-    def send_private_tx(self, chain_id: int, tx: dict, max_retries: int = 3) -> dict:
+    def send_private_tx(self, chain_id: int, tx: dict, max_retries: int = 3,
+                         require_private: bool = True) -> dict:
         """Send a transaction through private mempool.
 
         Tries multiple private relays in order:
         1. Flashbots Protect (Ethereum only)
         2. MEV Blocker (all chains)
         3. Direct RPC with higher gas (last resort)
+
+        Args:
+            require_private: If True, abort instead of falling back to public
+                           mempool when all private methods fail. Default True
+                           for exploit transactions. Set False for non-critical
+                           txs like approvals or config changes.
 
         Returns dict with success, tx_hash, method_used.
         """
@@ -107,7 +114,10 @@ class MEVProtection:
         if result['success']:
             return result
 
-        # Strategy 4: Fallback to public RPC (with warning)
+        # Strategy 4: Fallback to public RPC (only if allowed)
+        if require_private:
+            print('[MEV] BLOCKED: All private methods failed, aborting to prevent front-running')
+            return {'success': False, 'error': 'All private MEV methods failed - refusing to send via public mempool'}
         print('[MEV] WARNING: All private methods failed, falling back to public mempool')
         return self._send_public(chain_id, tx, wallet)
 

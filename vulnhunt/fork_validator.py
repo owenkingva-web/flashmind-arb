@@ -128,6 +128,16 @@ class ForkValidator:
         abi_json = json.dumps(abi)
         args_json = json.dumps(constructor_args or [])
 
+        # Encode constructor args into deployment bytecode
+        ctor_suffix = ''
+        if constructor_args:
+            try:
+                from eth_abi import encode
+                ctor_types = ['address'] * len(constructor_args)
+                ctor_suffix = encode(ctor_types, constructor_args).hex()
+            except Exception:
+                ctor_suffix = ''
+
         # Create a Foundry test script
         test_script = f'''
 // SPDX-License-Identifier: MIT
@@ -162,8 +172,8 @@ contract ForkTest is Test {{
         uint256 balBefore = address(TARGET).balance;
         console.log("TARGET_BAL_BEFORE:", balBefore);
 
-        // Deploy attacker
-        bytes memory bytecode = hex"{bytecode}";
+        // Deploy attacker with constructor args encoded in bytecode
+        bytes memory bytecode = hex"{bytecode}{ctor_suffix}";
         address attackerAddr;
         assembly {{
             attackerAddr := create(0, add(bytecode, 32), mload(bytecode))

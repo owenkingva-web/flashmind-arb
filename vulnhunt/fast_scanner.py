@@ -125,7 +125,7 @@ class FastScanner:
         'pendingAdmin()': bytes.fromhex('26782247'),
         'pendingOwner()': bytes.fromhex('e30c3978'),
         'timelock()': bytes.fromhex('2cf9f1e3'),
-        'guardian()': bytes.fromhex('c8f4c531'),
+        'guardian()': bytes.fromhex('5320f083'),
     }
 
     # DANGEROUS function selectors (test if callable by anyone)
@@ -140,8 +140,6 @@ class FastScanner:
         'claimOwnership()': bytes.fromhex('4e71e0c8'),
         'acceptAdmin()': bytes.fromhex('79ba5097'),
         'acceptOwnership()': bytes.fromhex('791ac947'),
-        'selfdestruct(address)': bytes.fromhex('42966c68'),
-        'destroy(address)': bytes.fromhex('5c975abb'),
     }
 
     def __init__(self, chain_ids: list = None, db: Database = None,

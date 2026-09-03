@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Slither + solc
+# Install Slither + solc-select (manages solc versions internally)
 RUN pip install --no-cache-dir slither-analyzer solc-select
 RUN solc-select install 0.8.20 && solc-select use 0.8.20
 

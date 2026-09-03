@@ -4,7 +4,7 @@ import json
 import sys
 import os
 from datetime import datetime, timezone
-from .config import CHAINS, DATA_DIR
+from .config import CHAINS, DATA_DIR, DEFAULT_SCAN
 from .db import Database
 from .discovery import DiscoveryEngine
 from .fetcher import SourceFetcher
@@ -176,9 +176,9 @@ Examples:
     # discover
     p = sub.add_parser('discover', help='Find new DeFi targets')
     p.add_argument('--chain', type=int, help='Chain ID')
-    p.add_argument('--min-tvl', type=float, default=0)
-    p.add_argument('--max-tvl', type=float, default=5_000_000)
-    p.add_argument('--days', type=int, default=90)
+    p.add_argument('--min-tvl', type=float, default=DEFAULT_SCAN['min_tvl'])
+    p.add_argument('--max-tvl', type=float, default=DEFAULT_SCAN['max_tvl'])
+    p.add_argument('--days', type=int, default=DEFAULT_SCAN['days_old'])
     # scan
     p = sub.add_parser('scan', help='Scan a contract')
     p.add_argument('--address', required=True, help='Contract address')

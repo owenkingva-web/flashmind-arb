@@ -744,7 +744,7 @@ class HunterAgent:
                     )
                     tx_hash = result.get('tx_hash', '')
                 except Exception:
-                    tx_hash = w3.eth.send_raw_transaction(signed.rawTransaction)
+                    tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
 
                 if tx_hash:
                     print(f'  [PROXY-EXPLOIT] TX SENT: {tx_hash[:16]}...')

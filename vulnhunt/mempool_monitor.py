@@ -16,6 +16,8 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Optional, Callable, Awaitable
 from web3 import Web3
+from collections import OrderedDict
+
 import websockets
 import requests
 
@@ -42,6 +44,8 @@ class MempoolEvent:
 
 
 # Known attacker/hunter addresses (populated from historical exploit data)
+# NOTE: This set should be populated from on-chain data / MEV bot registries.
+# Currently minimal — integrate with Flashbots/builder-boost data for production.
 KNOWN_HUNTERS = {
     # Add known MEV bots and whitehat hunters
     # These are public addresses from public exploit analyses
@@ -73,20 +77,15 @@ CRITICAL_SELECTORS = {
     '0x23b872dd': 'transferFrom',
 }
 
-# DEX router addresses for detecting swaps
+# DEX router addresses for detecting swaps (all lowercase for .lower() comparison)
 DEX_ROUTERS = {
-    # Uniswap V3 Router
-    '0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45',
-    '0xE592427A0AEce92De3Edee1F18E0157C05861564',
-    # Uniswap V2 Router
-    '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
-    # 1inch
-    '0x1111111254EEB25477B68fb85Ed929f73A960582',
-    # Sushi
-    '0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F',
-    # PancakeSwap V3
-    '0x13f4EA83D0bd40E75C8222255bc855a974568Dd4',
-    '0x1b81D678ffb9C0263b24A97847620C99d213eB14',
+    '0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45',  # Uniswap V3 Router
+    '0xe592427a0aece92de3edee1f18e0157c05861564',  # Uniswap V3 Router 2
+    '0x7a250d5630b4cf539739df2c5dacb4c659f2488d',  # Uniswap V2 Router
+    '0x1111111254eeb25477b68fb85ed929f73a960582',  # 1inch
+    '0xd9e1ce17f2641f24ae83637ab66a2cca9c378b9f',  # Sushi
+    '0x13f4ea83d0bd40e75c8222255bc855a974568dd4',  # PancakeSwap V3
+    '0x1b81d678ffb9c0263b24a97847620c99d213eb14',  # PancakeSwap V3 2
 }
 
 
@@ -97,7 +96,7 @@ class MempoolMonitor:
         self._w3_cache = {}
         self._running = False
         self._callbacks = [event_callback] if event_callback else []
-        self._recent_txs = {}  # chain -> set of tx hashes (dedup)
+        self._recent_txs: dict[int, OrderedDict] = {}  # chain -> OrderedDict of tx_hash->True (insertion-ordered)
         self._target_watch = {}  # chain -> set of addresses we're watching
         self._suspicious_txs = []  # Recent suspicious transactions
         self._max_suspicious = 1000
@@ -138,16 +137,18 @@ class MempoolMonitor:
         if isinstance(data, bytes):
             data = '0x' + data.hex() if data else '0x'
 
-        # Dedup
+        # Dedup (OrderedDict preserves insertion order)
         if chain_id in self._recent_txs and tx_hash in self._recent_txs[chain_id]:
             return None
         if chain_id not in self._recent_txs:
-            self._recent_txs[chain_id] = set()
-        self._recent_txs[chain_id].add(tx_hash)
+            self._recent_txs[chain_id] = OrderedDict()
+        self._recent_txs[chain_id][tx_hash] = True
 
-        # Trim dedup cache (keep last 10000)
+        # Trim dedup cache (keep last 10000 by insertion order)
         if len(self._recent_txs[chain_id]) > 10000:
-            self._recent_txs[chain_id] = set(list(self._recent_txs[chain_id])[-5000:])
+            # Evict oldest entries (first 5000)
+            for _ in range(5000):
+                self._recent_txs[chain_id].popitem(last=False)
 
         event = MempoolEvent(
             event_type='pending_tx',
