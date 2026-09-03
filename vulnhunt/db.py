@@ -391,9 +391,9 @@ class Database:
                 LEFT JOIN scans s ON s.contract_id = co.id
                 WHERE co.is_verified = 1
                 GROUP BY co.id
-                HAVING last_scan_time IS NULL OR last_scan_time < datetime('now', {ph})
-                ORDER BY p.tvl DESC NULLS LAST LIMIT {ph}"""
-            return self._qall(q, (f'-{hours}', limit))
+                HAVING last_scan_time IS NULL OR last_scan_time < datetime('now', ?)
+                ORDER BY p.tvl DESC NULLS LAST LIMIT ?"""
+            return self._qall(q, (f'-{hours} hours', limit))
 
     # ── Scan CRUD ─────────────────────────────────────────────────────────
 
