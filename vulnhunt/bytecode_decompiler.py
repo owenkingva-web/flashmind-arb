@@ -68,6 +68,8 @@ class BytecodeAnalyzer:
 
     def analyze_unverified(self, address: str, chain_id: int) -> BytecodeAnalysis:
         """Full analysis of an unverified contract."""
+        if ':' in address and not address.startswith('0x'):
+            address = address.split(':', 1)[1]
         w3 = self._get_w3(chain_id)
         addr = Web3.to_checksum_address(address)
 

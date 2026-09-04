@@ -3,3 +3,4 @@ requests>=2.31
 python-dotenv>=1.0
 aiohttp>=3.9
 psycopg2-binary>=2.9
+py-solc-x>=2.0

@@ -361,6 +361,7 @@ class HunterAgent:
         # Strip chain-prefix from DeFiLlama addresses (e.g. "merlin:0xabc..." -> "0xabc...")
         if ':' in addr and not addr.startswith('0x'):
             addr = addr.split(':', 1)[1]
+        target.address = addr
         chain = CHAINS.get(chain_id, {})
         chain_name = chain.get('name', f'chain-{chain_id}')
 
@@ -658,8 +659,8 @@ class HunterAgent:
         fork validation is unnecessary because the blockchain IS the proof.
         This saves 30-120 seconds per exploit attempt.
         """
-        chain_id = finding.get('chain_id', 0)
-        raw = finding.get('raw_data', {})
+        raw = finding.get('raw_data', {}) if isinstance(finding.get('raw_data'), dict) else {}
+        chain_id = raw.get('chain_id', 0) or finding.get('chain_id', 0)
         target_addr = raw.get('contract_address', finding.get('location', ''))[:42]
         if not target_addr.startswith('0x'):
             return
