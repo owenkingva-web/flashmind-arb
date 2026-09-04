@@ -124,8 +124,9 @@ class MEVProtection:
                 try:
                     # Send as a single-tx bundle targeting next block
                     block = self._get_w3(1).eth.block_number
+                    raw_tx = getattr(signed, 'raw_transaction', getattr(signed, 'rawTransaction', None))
                     result = fb.send_bundle(
-                        [{'tx': signed.raw_transaction, 'signer': wallet}],
+                        [{'tx': raw_tx, 'signer': wallet}],
                         target_block_number=block + 1,
                     )
 
@@ -167,7 +168,8 @@ class MEVProtection:
             try:
                 import requests
                 signed = wallet.sign_transaction(tx)
-                raw_tx = '0x' + signed.raw_transaction.hex()
+                raw_bytes = getattr(signed, 'raw_transaction', getattr(signed, 'rawTransaction', None))
+                raw_tx = '0x' + raw_bytes.hex()
 
                 payload = {
                     'jsonrpc': '2.0',
@@ -210,7 +212,8 @@ class MEVProtection:
         try:
             import requests
             signed = wallet.sign_transaction(tx)
-            raw_tx = '0x' + signed.raw_transaction.hex()
+            raw_bytes = getattr(signed, 'raw_transaction', getattr(signed, 'rawTransaction', None))
+            raw_tx = '0x' + raw_bytes.hex()
 
             # MEV Blocker endpoint
             payload = {
@@ -248,7 +251,8 @@ class MEVProtection:
         try:
             w3 = self._get_w3(chain_id)
             signed = wallet.sign_transaction(tx)
-            tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
+            raw_tx = getattr(signed, 'raw_transaction', getattr(signed, 'rawTransaction', None))
+            tx_hash = w3.eth.send_raw_transaction(raw_tx)
             print(f'[MEV] WARNING: Public mempool: {tx_hash.hex()}')
             return {
                 'success': True,
@@ -304,12 +308,15 @@ class MEVProtection:
             signed_deploy = wallet.sign_transaction(deploy_tx)
             signed_execute = wallet.sign_transaction(execute_tx)
 
+            raw_deploy = getattr(signed_deploy, 'raw_transaction', getattr(signed_deploy, 'rawTransaction', None))
+            raw_execute = getattr(signed_execute, 'raw_transaction', getattr(signed_execute, 'rawTransaction', None))
+
             block = self._get_w3(1).eth.block_number
 
             result = fb.send_bundle(
                 [
-                    {'tx': signed_deploy.raw_transaction, 'signer': wallet},
-                    {'tx': signed_execute.raw_transaction, 'signer': wallet},
+                    {'tx': raw_deploy, 'signer': wallet},
+                    {'tx': raw_execute, 'signer': wallet},
                 ],
                 target_block_number=block + 2,  # 2 blocks out for safety
             )

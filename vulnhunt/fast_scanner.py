@@ -54,7 +54,7 @@ from dataclasses import dataclass, field
 from typing import Optional, List, Tuple
 from web3 import Web3
 
-from .config import CHAINS, ETH_PRICE_USD, WALLET_PRIVATE_KEY
+from .config import CHAINS, FALLBACK_RPCS, ETH_PRICE_USD, WALLET_PRIVATE_KEY
 from .db import Database
 from .analyzer import Finding
 
@@ -162,11 +162,28 @@ class FastScanner:
             chain = CHAINS.get(chain_id)
             if not chain:
                 return None
-            w3 = Web3(Web3.HTTPProvider(
-                chain['rpc'], request_kwargs={'timeout': 10}
-            ))
-            self._w3_cache[chain_id] = w3
-        return self._w3_cache[chain_id]
+            # Initialize with primary RPC and fallbacks
+            primary = chain['rpc']
+            fallbacks = [r for r in FALLBACK_RPCS.get(chain_id, []) if r != primary]
+            endpoints = [primary] + fallbacks if primary else fallbacks
+            self._w3_cache[chain_id] = {
+                'endpoints': endpoints,
+                'current_idx': 0,
+                'w3': Web3(Web3.HTTPProvider(endpoints[0], request_kwargs={'timeout': 10})),
+            }
+        return self._w3_cache[chain_id]['w3']
+
+    def _rotate_w3(self, chain_id: int) -> Web3:
+        """Rotate to next available fallback RPC when rate limited or error occurs."""
+        if chain_id in self._w3_cache:
+            entry = self._w3_cache[chain_id]
+            endpoints = entry['endpoints']
+            if len(endpoints) > 1:
+                entry['current_idx'] = (entry['current_idx'] + 1) % len(endpoints)
+                next_rpc = endpoints[entry['current_idx']]
+                entry['w3'] = Web3(Web3.HTTPProvider(next_rpc, request_kwargs={'timeout': 10}))
+                return entry['w3']
+        return self._get_w3(chain_id)
 
     def _is_eoa(self, chain_id: int, address: str) -> bool:
         """Check if address is an EOA (no code)."""
@@ -194,14 +211,24 @@ class FastScanner:
 
         addr = Web3.to_checksum_address(address)
 
-        # STEP 1: Check if contract exists
+        # STEP 1: Check if contract exists (with retry/rotate on 429 rate limit)
         try:
             code = w3.eth.get_code(addr)
             if not code or len(code) <= 2:
                 return result  # EOA, skip
             result.has_code = True
-        except Exception:
-            return result
+        except Exception as e:
+            if '429' in str(e) or 'Too Many Requests' in str(e):
+                w3 = self._rotate_w3(chain_id)
+                try:
+                    code = w3.eth.get_code(addr)
+                    if not code or len(code) <= 2:
+                        return result
+                    result.has_code = True
+                except Exception:
+                    return result
+            else:
+                return result
 
         # STEP 2: Check balance + EIP-1967 proxy slot (2 RPC calls, always)
         try:

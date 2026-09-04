@@ -38,14 +38,40 @@ ALERT_EMAIL_PASSWORD = os.getenv('ALERT_EMAIL_PASSWORD', '')
 ALERT_EMAIL_TO = os.getenv('ALERT_EMAIL_TO', ALERT_EMAIL)
 
 # Chain Configurations
-# v3.0: Private node configuration
-# Set these in .env for dedicated endpoints (lower latency, higher rate limits)
-# Free tier Alchemy/Infura gives 300M compute units/month
+# Multi-RPC rotation for zero rate-limiting on free tier
+FALLBACK_RPCS = {
+    1: [
+        'https://eth.llamarpc.com',
+        'https://rpc.ankr.com/eth',
+        'https://1rpc.io/eth',
+        'https://ethereum-rpc.publicnode.com',
+    ],
+    42161: [
+        'https://arb1.arbitrum.io/rpc',
+        'https://arbitrum.llamarpc.com',
+        'https://rpc.ankr.com/arbitrum',
+        'https://1rpc.io/arb',
+        'https://arbitrum-one-rpc.publicnode.com',
+    ],
+    8453: [
+        'https://mainnet.base.org',
+        'https://base.llamarpc.com',
+        'https://1rpc.io/base',
+        'https://base-rpc.publicnode.com',
+    ],
+    56: [
+        'https://bsc-dataseed.binance.org',
+        'https://binance.llamarpc.com',
+        'https://1rpc.io/bnb',
+        'https://bsc-rpc.publicnode.com',
+    ],
+}
+
 PRIVATE_NODES = {
-    1: os.getenv('RPC_MAINNET_PRIVATE', ''),      # Alchemy/Infura dedicated
-    42161: os.getenv('RPC_ARBITRUM_PRIVATE', ''),    # Alchemy/Infura dedicated
-    8453: os.getenv('RPC_BASE_PRIVATE', ''),         # Alchemy/Infura dedicated
-    56: os.getenv('RPC_BSC_PRIVATE', ''),            # BSC dedicated node
+    1: os.getenv('RPC_MAINNET_PRIVATE', ''),
+    42161: os.getenv('RPC_ARBITRUM_PRIVATE', ''),
+    8453: os.getenv('RPC_BASE_PRIVATE', ''),
+    56: os.getenv('RPC_BSC_PRIVATE', ''),
 }
 
 # WebSocket endpoint for Arbitrum (sub-second block monitoring)

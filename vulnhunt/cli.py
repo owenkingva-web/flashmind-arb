@@ -113,7 +113,7 @@ def cmd_scan(args):
         json.dump({
             'address': args.address, 'chain_id': args.chain,
             'findings': [f.to_dict() for f in findings],
-        }, indent=2)
+        }, fp, indent=2)
     print(f'\nSaved to {out}')
     db.close()
 
@@ -149,15 +149,18 @@ def cmd_status(args):
 def cmd_wallet(args):
     """Show wallet info and balances."""
     executor = ExploitExecutor()
-    addr = executor.get_wallet_address()
-    print(f'Wallet: {addr}')
-    for cid, chain in CHAINS.items():
-        try:
-            bal = executor.get_balance(cid)
-            status = '✓' if bal > 0.001 else '✗ low'
-            print(f'  {chain["name"]:<15} {bal:.6f} ETH  {status}')
-        except Exception:
-            print(f'  {chain["name"]:<15} connection failed')
+    try:
+        addr = executor.get_wallet_address()
+        print(f'Wallet: {addr}')
+        for cid, chain in CHAINS.items():
+            try:
+                bal = executor.get_balance(cid)
+                status = '✓' if bal > 0.001 else '✗ low'
+                print(f'  {chain["name"]:<15} {bal:.6f} ETH  {status}')
+            except Exception:
+                print(f'  {chain["name"]:<15} connection failed')
+    except ValueError as e:
+        print(f'Wallet: NOT CONFIGURED ({e})')
 
 def main():
     parser = argparse.ArgumentParser(
