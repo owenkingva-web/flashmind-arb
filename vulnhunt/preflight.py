@@ -16,7 +16,21 @@ from dataclasses import dataclass
 from typing import Optional
 from web3 import Web3
 
-from .config import CHAINS, ETH_PRICE_USD, WALLET_PRIVATE_KEY
+from .config import CHAINS, get_eth_price, ETH_PRICE_USD, WALLET_PRIVATE_KEY
+
+
+def _safe_rpc(fn, *args, retries=2, **kwargs):
+    """RPC call with retry on rate limit errors."""
+    for attempt in range(1 + retries):
+        try:
+            return fn(*args, **kwargs)
+        except Exception as e:
+            err = str(e)
+            if attempt < retries and ('429' in err or '400' in err or 'rate' in err.lower()):
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            raise
+    return None
 
 
 @dataclass
@@ -99,7 +113,7 @@ class PreflightChecker:
 
         # Check 1: Target has code
         try:
-            code = w3.eth.get_code(addr)
+            code = _safe_rpc(w3.eth.get_code, addr)
             has_code = len(code) > 2
             result.checks['target_has_code'] = has_code
             if not has_code:
@@ -112,10 +126,11 @@ class PreflightChecker:
 
         # Check 2: Target balance (is there anything to drain?)
         try:
-            target_bal = w3.eth.get_balance(addr)
+            target_bal = _safe_rpc(w3.eth.get_balance, addr)
             target_eth = float(w3.from_wei(target_bal, 'ether'))
             result.checks['target_eth_balance'] = f'{target_eth:.6f}'
-            result.checks['target_balance_usd'] = f'${target_eth * ETH_PRICE_USD:,.2f}'
+            eth_price = get_eth_price()
+            result.checks['target_balance_usd'] = f'${target_eth * eth_price:,.2f}'
 
             if target_eth == 0:
                 result.warnings.append('Target holds 0 native tokens')
@@ -150,7 +165,8 @@ class PreflightChecker:
                 result.checks['gas_price_gwei'] = f'{gas_price_gwei:.2f}'
                 result.checks['total_gas_cost_eth'] = f'{total_gas_cost:.6f}'
                 result.estimated_gas_cost_eth = total_gas_cost
-                result.estimated_gas_cost_usd = total_gas_cost * ETH_PRICE_USD
+                eth_price = get_eth_price()
+                result.estimated_gas_cost_usd = total_gas_cost * eth_price
 
                 safety_ratio = wallet_eth / total_gas_cost if total_gas_cost > 0 else float('inf')
                 result.checks['gas_safety_ratio'] = f'{safety_ratio:.1f}x'
@@ -185,14 +201,14 @@ class PreflightChecker:
                             address=Web3.to_checksum_address(pool),
                             abi=self.AAVE_POOL_ABI,
                         )
-                        # WETH address varies by chain
-                        weth_by_chain = {
-                            1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',     # Mainnet WETH
-                            42161: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',  # Arbitrum WETH
-                            8453: '0x4200000000000000000000000000000000000006',    # Base WETH
-                            56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',    # BSC WBNB
+                        # Use the correct WETH/WNATIVE per chain
+                        WETH_PER_CHAIN = {
+                            1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+                            42161: '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1',
+                            8453: '0x4200000000000000000000000000000000000006',
+                            56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
                         }
-                        weth = weth_by_chain.get(chain_id, weth_by_chain[1])
+                        weth = WETH_PER_CHAIN.get(chain_id, WETH_PER_CHAIN[1])
                         liquidity = pool_contract.functions.getAvailableLiquidity(
                             Web3.to_checksum_address(weth)
                         ).call()

