@@ -187,7 +187,7 @@ Examples:
     p = sub.add_parser('watch', help='Start 24/7 autonomous hunter')
     p.add_argument('--interval', type=int, default=300, help='Scan interval (seconds)')
     p.add_argument('--chain', type=int, help='Chain ID (default: all)')
-    p.add_argument('--execute', action='store_true', help='Auto-execute exploits')
+    p.add_argument('--execute', action='store_true', default=True, help='Auto-execute exploits (default: ON)')
     p.add_argument('--min-confidence', type=float, default=0.7)
     p.add_argument('--min-priority', type=int, default=70)
     # status

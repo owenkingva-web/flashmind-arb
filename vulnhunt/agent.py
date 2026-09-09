@@ -63,7 +63,7 @@ class HunterAgent:
     7. EXECUTE: Via MEV-protected private transactions
     """
 
-    def __init__(self, chain_ids: list = None, auto_execute: bool = False,
+    def __init__(self, chain_ids: list = None, auto_execute: bool = True,
                  min_confidence_execute: float = 0.7,
                  min_priority_execute: int = 70,
                  skip_fork_validation: bool = False,
